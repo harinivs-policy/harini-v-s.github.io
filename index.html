@@ -3,90 +3,842 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Harini V. S. | Public Policy Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #f5f1e8;
+            color: #172b3a;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(245, 241, 232, 0.96);
+            border-bottom: 1px solid #d8d1c3;
+            padding: 18px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(8px);
+        }
+
+        .logo {
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        nav li a:hover {
+            color: #397b78;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 88vh;
+            padding: 100px 8% 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 1250px;
+            margin: auto;
+        }
+
+        .eyebrow {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #397b78;
+            font-weight: bold;
+            margin-bottom: 22px;
+        }
+
+        h1 {
+            font-size: clamp(55px, 10vw, 125px);
+            line-height: 0.9;
+            font-weight: 500;
+            letter-spacing: -5px;
+            max-width: 900px;
+        }
+
+        .hero-subtitle {
+            font-family: Arial, sans-serif;
+            font-size: 17px;
+            letter-spacing: 2px;
+            margin-top: 30px;
+            color: #52616b;
+        }
+
+        .hero-description {
+            font-size: 24px;
+            max-width: 720px;
+            margin-top: 30px;
+            color: #344957;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            padding: 15px 23px;
+            border: 1px solid #172b3a;
+            transition: 0.25s ease;
+        }
+
+        .button.primary {
+            background: #172b3a;
+            color: #f5f1e8;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* GENERAL */
+
+        section {
+            padding: 100px 8%;
+            max-width: 1250px;
+            margin: auto;
+        }
+
+        .section-label {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: #397b78;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: clamp(38px, 6vw, 70px);
+            line-height: 1;
+            font-weight: 500;
+            letter-spacing: -2px;
+        }
+
+        /* FEATURED WORK */
+
+        .featured {
+            background: #172b3a;
+            color: #f5f1e8;
+            max-width: none;
+            padding-left: 8%;
+            padding-right: 8%;
+        }
+
+        .featured-inner {
+            max-width: 1250px;
+            margin: auto;
+        }
+
+        .featured .section-label {
+            color: #9cc7c2;
+        }
+
+        .project-card {
+            margin-top: 50px;
+            border: 1px solid rgba(245, 241, 232, 0.25);
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-number {
+            font-family: Arial, sans-serif;
+            font-size: 90px;
+            font-weight: bold;
+            opacity: 0.08;
+            position: absolute;
+            right: 30px;
+            top: 10px;
+        }
+
+        .project-type {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #9cc7c2;
+            margin-bottom: 25px;
+        }
+
+        .project-title {
+            font-size: clamp(42px, 7vw, 82px);
+            line-height: 0.95;
+            max-width: 800px;
+        }
+
+        .project-description {
+            font-size: 20px;
+            max-width: 700px;
+            margin-top: 30px;
+            color: #d8e0df;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .tag {
+            border: 1px solid rgba(245, 241, 232, 0.35);
+            padding: 8px 13px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 1.5px;
+        }
+
+        .project-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 17px 25px;
+            background: #f5f1e8;
+            color: #172b3a;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            transition: 0.25s ease;
+        }
+
+        .project-button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* POLICY LENS */
+
+        .lens {
+            border-bottom: 1px solid #d8d1c3;
+        }
+
+        .lens-intro {
+            max-width: 650px;
+            font-size: 20px;
+            margin-top: 25px;
+            color: #52616b;
+        }
+
+        .lens-flow {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            border-top: 1px solid #bdb6a9;
+            border-bottom: 1px solid #bdb6a9;
+        }
+
+        .lens-item {
+            padding: 28px 15px;
+            border-right: 1px solid #bdb6a9;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            text-align: center;
+            transition: 0.25s ease;
+        }
+
+        .lens-item:last-child {
+            border-right: none;
+        }
+
+        .lens-item:hover {
+            background: #dfe9e6;
+            color: #397b78;
+        }
+
+        /* INTERESTS */
+
+        .interests {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .interest-list {
+            border-top: 1px solid #bdb6a9;
+        }
+
+        .interest {
+            padding: 22px 0;
+            border-bottom: 1px solid #bdb6a9;
+            font-size: 21px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .interest span {
+            color: #397b78;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: #e7e2d8;
+            max-width: none;
+        }
+
+        .about-inner {
+            max-width: 1250px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 80px;
+        }
+
+        .about-text {
+            font-size: 24px;
+            max-width: 700px;
+        }
+
+        .about-small {
+            margin-top: 25px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #52616b;
+        }
+
+        /* POLICY LAB */
+
+        .lab-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .lab-card {
+            border: 1px solid #c6c0b5;
+            padding: 35px;
+            min-height: 230px;
+            transition: 0.25s ease;
+        }
+
+        .lab-card:hover {
+            transform: translateY(-5px);
+            background: #ebe7de;
+        }
+
+        .lab-card h3 {
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        .lab-card p {
+            margin-top: 15px;
+            color: #52616b;
+        }
+
+        /* CONNECT */
+
+        .connect {
+            background: #397b78;
+            color: #f5f1e8;
+            max-width: none;
+            text-align: center;
+        }
+
+        .connect-inner {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .connect h2 {
+            font-size: clamp(45px, 7vw, 80px);
+        }
+
+        .connect p {
+            font-size: 19px;
+            margin: 25px auto;
+            max-width: 600px;
+        }
+
+        .connect-button {
+            display: inline-block;
+            margin-top: 20px;
+            background: #f5f1e8;
+            color: #172b3a;
+            padding: 16px 28px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #172b3a;
+            color: #b9c3c7;
+            padding: 25px 8%;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 1px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                min-height: 80vh;
+                padding: 80px 7%;
+            }
+
+            h1 {
+                letter-spacing: -3px;
+            }
+
+            .hero-description {
+                font-size: 20px;
+            }
+
+            section {
+                padding: 75px 7%;
+            }
+
+            .project-card {
+                padding: 30px;
+            }
+
+            .lens-flow {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .lens-item:nth-child(2),
+            .lens-item:nth-child(4) {
+                border-right: none;
+            }
+
+            .lens-item {
+                border-bottom: 1px solid #bdb6a9;
+            }
+
+            .interests,
+            .about-inner,
+            .lab-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-inner {
+                gap: 35px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Harini V. S.</h1>
+    <!-- NAVIGATION -->
 
-    <h2>Public Policy | Governance | Technology | Research</h2>
+    <nav>
+        <div class="logo">HARINI V. S.</div>
 
-    <p>
-        Looking at public problems through policy, evidence and people.
-    </p>
+        <ul>
+            <li><a href="#work">WORK</a></li>
+            <li><a href="#lens">POLICY LENS</a></li>
+            <li><a href="#interests">INTERESTS</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#connect">CONNECT</a></li>
+        </ul>
+    </nav>
 
-    <hr>
 
-    <h2>Policy Lens</h2>
+    <!-- HERO -->
 
-    <p>
-        Policy → Evidence → Institutions → People → Implementation → Impact
-    </p>
+    <header class="hero">
 
-    <hr>
+        <div class="eyebrow">
+            PUBLIC POLICY PORTFOLIO
+        </div>
 
-    <h2>Featured Work</h2>
+        <h1>
+            Harini<br>
+            V. S.
+        </h1>
 
-    <h3>National Geospatial Policy 2022</h3>
+        <div class="hero-subtitle">
+            PUBLIC POLICY &nbsp; / &nbsp; GOVERNANCE &nbsp; / &nbsp; TECHNOLOGY &nbsp; / &nbsp; RESEARCH
+        </div>
 
-    <p>
-        Exploring the role of geospatial technology in governance,
-        development and public decision-making.
-    </p>
+        <p class="hero-description">
+            Looking at public problems through policy, evidence and people.
+        </p>
 
-    <p>
-        <a href="https://heyzine.com/flip-book/9bf2ae2e77.html">
-            View Project →
-        </a>
-    </p>
+        <div class="buttons">
+            <a href="#work" class="button primary">
+                EXPLORE MY WORK →
+            </a>
 
-    <hr>
+            <a href="#about" class="button">
+                ABOUT ME
+            </a>
+        </div>
 
-    <h2>Policy Interests</h2>
+    </header>
 
-    <ul>
-        <li>Digital Governance</li>
-        <li>Geospatial Policy</li>
-        <li>Technology & Governance</li>
-        <li>Public Service Delivery</li>
-        <li>Policy Research & Communication</li>
-    </ul>
 
-    <hr>
+    <!-- FEATURED WORK -->
 
-    <h2>Policy Lab</h2>
+    <section class="featured" id="work">
 
-    <h3>Policy Notes</h3>
+        <div class="featured-inner">
 
-    <p>
-        Short analyses and observations on contemporary public policy.
-    </p>
+            <div class="section-label">
+                FEATURED WORK / 01
+            </div>
 
-    <h3>Visual Policy</h3>
+            <div class="project-card">
 
-    <p>
-        Infographics, maps, data visualisations and policy explainers.
-    </p>
+                <div class="project-number">
+                    01
+                </div>
 
-    <hr>
+                <div class="project-type">
+                    POLICY RESEARCH
+                </div>
 
-    <h2>About</h2>
+                <div class="project-title">
+                    Constituency<br>
+                    Policy Dossier
+                </div>
 
-    <p>
-        I am interested in understanding how public policy,
-        institutions and technology shape citizen experiences.
-    </p>
+                <p class="project-description">
+                    A policy-focused dossier examining constituency-level
+                    issues through evidence, governance and possible
+                    policy responses.
+                </p>
 
-    <hr>
+                <div class="tags">
+                    <span class="tag">GOVERNANCE</span>
+                    <span class="tag">POLICY RESEARCH</span>
+                    <span class="tag">EVIDENCE</span>
+                    <span class="tag">CONSTITUENCY</span>
+                </div>
 
-    <h2>Connect</h2>
+                <a
+                    href="https://heyzine.com/flip-book/9bf2ae2e77.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-button"
+                >
+                    READ THE FULL DOSSIER →
+                </a>
 
-    <p>
-        <a href="https://www.linkedin.com/in/harini-v-s-8a5a9a424">
-            LinkedIn
-        </a>
-    </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- POLICY LENS -->
+
+    <section class="lens" id="lens">
+
+        <div class="section-label">
+            HOW I LOOK AT POLICY
+        </div>
+
+        <h2>
+            The Policy Lens
+        </h2>
+
+        <p class="lens-intro">
+            Public policy is not only about designing a solution.
+            It is about understanding the problem, the evidence,
+            the institutions involved and the people affected.
+        </p>
+
+        <div class="lens-flow">
+
+            <div class="lens-item">
+                01<br>PROBLEM
+            </div>
+
+            <div class="lens-item">
+                02<br>EVIDENCE
+            </div>
+
+            <div class="lens-item">
+                03<br>INSTITUTIONS
+            </div>
+
+            <div class="lens-item">
+                04<br>PEOPLE
+            </div>
+
+            <div class="lens-item">
+                05<br>IMPLEMENTATION
+            </div>
+
+            <div class="lens-item">
+                06<br>IMPACT
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- POLICY INTERESTS -->
+
+    <section id="interests">
+
+        <div class="interests">
+
+            <div>
+
+                <div class="section-label">
+                    AREAS OF INTEREST
+                </div>
+
+                <h2>
+                    Policy<br>Interests
+                </h2>
+
+            </div>
+
+            <div class="interest-list">
+
+                <div class="interest">
+                    Digital Governance
+                    <span>01</span>
+                </div>
+
+                <div class="interest">
+                    Technology & Governance
+                    <span>02</span>
+                </div>
+
+                <div class="interest">
+                    Geospatial Policy
+                    <span>03</span>
+                </div>
+
+                <div class="interest">
+                    Public Service Delivery
+                    <span>04</span>
+                </div>
+
+                <div class="interest">
+                    Policy Research
+                    <span>05</span>
+                </div>
+
+                <div class="interest">
+                    Policy Communication
+                    <span>06</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <div class="about-inner">
+
+            <div>
+
+                <div class="section-label">
+                    ABOUT
+                </div>
+
+                <h2>
+                    The person<br>
+                    behind the work.
+                </h2>
+
+            </div>
+
+            <div>
+
+                <p class="about-text">
+                    I am interested in understanding how public policy,
+                    institutions and technology shape citizen experiences.
+                </p>
+
+                <p class="about-small">
+                    My interests sit at the intersection of governance,
+                    technology, evidence and public problem-solving.
+                </p>
+
+                <div class="buttons">
+
+                    <a
+                        href="https://www.linkedin.com/in/harini-v-s-8a5a9a424"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="button primary"
+                    >
+                        VIEW LINKEDIN →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- POLICY LAB -->
+
+    <section>
+
+        <div class="section-label">
+            POLICY LAB
+        </div>
+
+        <h2>
+            More to come.
+        </h2>
+
+        <div class="lab-grid">
+
+            <div class="lab-card">
+
+                <h3>
+                    Policy Notes
+                </h3>
+
+                <p>
+                    Short analyses, observations and reflections
+                    on contemporary public policy questions.
+                </p>
+
+            </div>
+
+            <div class="lab-card">
+
+                <h3>
+                    Visual Policy
+                </h3>
+
+                <p>
+                    Infographics, visual explainers, maps and
+                    data-driven policy communication.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONNECT -->
+
+    <section class="connect" id="connect">
+
+        <div class="connect-inner">
+
+            <div class="section-label">
+                CONNECT
+            </div>
+
+            <h2>
+                Let's talk<br>
+                policy.
+            </h2>
+
+            <p>
+                Interested in public policy, governance,
+                technology and evidence-based problem solving?
+            </p>
+
+            <a
+                href="https://www.linkedin.com/in/harini-v-s-8a5a9a424"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="connect-button"
+            >
+                CONNECT ON LINKEDIN →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div>
+            © 2026 HARINI V. S.
+        </div>
+
+        <div>
+            PUBLIC POLICY / GOVERNANCE / TECHNOLOGY / RESEARCH
+        </div>
+
+    </footer>
 
 </body>
 </html>
