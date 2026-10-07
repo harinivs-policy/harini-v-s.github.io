@@ -1,2698 +1,2168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Harini V S | Public Policy & Programme Management</title>
-
-<meta name="description"
-content="Harini V S — Programme Management, Data-Driven Governance, Policy Research and Stakeholder Coordination.">
-
-<style>
-:root{
-  --ink:#17232b;
-  --muted:#68747b;
-  --paper:#f7f4ed;
-  --paper2:#efebe2;
-  --white:#fffdf8;
-  --navy:#183642;
-  --teal:#287a78;
-  --teal-light:#dcebea;
-  --coral:#d9785d;
-  --line:#d8d3c9;
-  --shadow:0 18px 50px rgba(23,35,43,.08);
-  --radius:18px;
-}
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:Arial, Helvetica, sans-serif;
-  background:var(--paper);
-  color:var(--ink);
-  line-height:1.6;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-button{
-  font:inherit;
-}
-
-.container{
-  width:min(1180px,92%);
-  margin:auto;
-}
-
-/* =========================
-   NAVIGATION
-========================= */
-
-nav{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(247,244,237,.94);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--line);
-}
-
-.nav-inner{
-  min-height:74px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:30px;
-}
-
-.logo{
-  font-size:14px;
-  font-weight:800;
-  letter-spacing:.08em;
-  white-space:nowrap;
-}
-
-.logo:hover{
-  color:var(--teal);
-}
-
-.nav-links{
-  display:flex;
-  gap:26px;
-  align-items:center;
-}
-
-.nav-links a{
-  font-size:12px;
-  font-weight:700;
-  letter-spacing:.08em;
-  color:#45535a;
-}
-
-.nav-links a:hover{
-  color:var(--teal);
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-  min-height:calc(100vh - 74px);
-  display:flex;
-  align-items:center;
-  position:relative;
-  overflow:hidden;
-}
-
-.hero:before{
-  content:"";
-  position:absolute;
-  width:600px;
-  height:600px;
-  border-radius:50%;
-  background:var(--teal-light);
-  right:-230px;
-  top:-170px;
-  opacity:.65;
-}
-
-.hero:after{
-  content:"";
-  position:absolute;
-  width:280px;
-  height:280px;
-  border:1px solid #c9d6d4;
-  border-radius:50%;
-  right:80px;
-  bottom:-120px;
-}
-
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:80px;
-  align-items:center;
-  position:relative;
-  z-index:2;
-}
-
-.eyebrow{
-  font-size:12px;
-  letter-spacing:.18em;
-  font-weight:800;
-  color:var(--teal);
-  margin-bottom:22px;
-}
-
-.hero h1{
-  font-size:clamp(48px,7vw,96px);
-  line-height:.95;
-  letter-spacing:-.065em;
-  margin-bottom:30px;
-  white-space:nowrap;
-}
-
-.hero h1 span{
-  color:var(--teal);
-}
-
-.hero-subtitle{
-  font-size:clamp(20px,2.5vw,30px);
-  line-height:1.3;
-  max-width:700px;
-  margin-bottom:25px;
-  font-weight:500;
-}
-
-.hero-description{
-  max-width:650px;
-  color:var(--muted);
-  font-size:17px;
-  margin-bottom:35px;
-}
-
-.hero-buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-}
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:13px 20px;
-  border-radius:999px;
-  font-size:13px;
-  font-weight:800;
-  border:1px solid var(--ink);
-  transition:.25s ease;
-  cursor:pointer;
-}
-
-.btn-primary{
-  background:var(--navy);
-  color:white;
-}
-
-.btn-primary:hover{
-  transform:translateY(-2px);
-  background:var(--teal);
-  border-color:var(--teal);
-}
-
-.btn-secondary{
-  background:transparent;
-}
-
-.btn-secondary:hover{
-  background:var(--white);
-  transform:translateY(-2px);
-}
-
-.hero-card{
-  background:var(--navy);
-  color:white;
-  padding:38px;
-  border-radius:24px;
-  box-shadow:var(--shadow);
-  position:relative;
-  overflow:hidden;
-}
-
-.hero-card:before{
-  content:"FIELD → DATA → POLICY";
-  position:absolute;
-  top:18px;
-  right:20px;
-  font-size:9px;
-  letter-spacing:.12em;
-  color:#9ab7b8;
-}
-
-.hero-card h3{
-  margin-top:38px;
-  font-size:25px;
-  line-height:1.2;
-  margin-bottom:28px;
-}
-
-.pipeline{
-  display:flex;
-  flex-direction:column;
-}
-
-.pipeline div{
-  padding:15px 0;
-  border-top:1px solid rgba(255,255,255,.18);
-  display:flex;
-  justify-content:space-between;
-  font-size:14px;
-}
-
-.pipeline div:last-child{
-  border-bottom:1px solid rgba(255,255,255,.18);
-}
-
-.pipeline span{
-  color:#94c9c7;
-  font-weight:800;
-}
-
-/* =========================
-   METRICS
-========================= */
-
-.metrics{
-  background:var(--navy);
-  color:white;
-  padding:34px 0;
-}
-
-.metrics-grid{
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-}
-
-.metric{
-  padding:10px 25px;
-  border-right:1px solid rgba(255,255,255,.15);
-}
-
-.metric:last-child{
-  border:none;
-}
-
-.metric strong{
-  display:block;
-  font-size:30px;
-  line-height:1;
-  margin-bottom:7px;
-}
-
-.metric span{
-  font-size:11px;
-  letter-spacing:.08em;
-  color:#b9c9ca;
-  text-transform:uppercase;
-}
-
-/* =========================
-   GENERAL SECTIONS
-========================= */
-
-section{
-  padding:110px 0;
-}
-
-.section-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
-  gap:30px;
-  margin-bottom:55px;
-}
-
-.section-number{
-  font-size:12px;
-  color:var(--coral);
-  letter-spacing:.15em;
-  font-weight:800;
-  margin-bottom:12px;
-}
-
-.section-title{
-  font-size:clamp(35px,5vw,60px);
-  letter-spacing:-.045em;
-  line-height:1;
-}
-
-.section-intro{
-  max-width:440px;
-  color:var(--muted);
-}
-
-/* =========================
-   FEATURED WORK
-========================= */
-
-.featured{
-  background:var(--white);
-}
-
-.featured-project{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  background:var(--paper2);
-  border-radius:24px;
-  overflow:hidden;
-  box-shadow:var(--shadow);
-}
-
-.featured-visual{
-  min-height:510px;
-  background:
-    linear-gradient(135deg,rgba(24,54,66,.95),rgba(40,122,120,.88)),
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 20px,
-      rgba(255,255,255,.04) 20px,
-      rgba(255,255,255,.04) 21px
-    );
-  color:white;
-  padding:45px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-}
-
-.visual-label{
-  font-size:11px;
-  letter-spacing:.18em;
-  font-weight:800;
-  color:#a9d2d0;
-}
-
-.visual-title{
-  font-size:clamp(35px,4vw,55px);
-  line-height:1;
-  letter-spacing:-.05em;
-  max-width:450px;
-}
-
-.island-diagram{
-  height:180px;
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.island{
-  width:170px;
-  height:110px;
-  border:2px solid #9bc6c5;
-  border-radius:55% 45% 50% 48%;
-  transform:rotate(-12deg);
-  position:relative;
-}
-
-.island:before,
-.island:after{
-  content:"";
-  position:absolute;
-  border:1px solid rgba(255,255,255,.4);
-  border-radius:50%;
-}
-
-.island:before{
-  width:220px;
-  height:145px;
-  left:-28px;
-  top:-18px;
-}
-
-.island:after{
-  width:280px;
-  height:185px;
-  left:-55px;
-  top:-38px;
-}
-
-.featured-content{
-  padding:50px;
-}
-
-.tag-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:7px;
-  margin-bottom:24px;
-}
-
-.tag{
-  border:1px solid var(--line);
-  border-radius:999px;
-  padding:6px 10px;
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:.06em;
-}
-
-.featured-content h3{
-  font-size:38px;
-  line-height:1.05;
-  letter-spacing:-.04em;
-  margin-bottom:22px;
-}
-
-.featured-content p{
-  color:var(--muted);
-  margin-bottom:28px;
-}
-
-.pillars{
-  border-top:1px solid var(--line);
-  margin:30px 0;
-}
-
-.pillar{
-  padding:15px 0;
-  border-bottom:1px solid var(--line);
-  display:flex;
-  gap:15px;
-}
-
-.pillar b{
-  color:var(--teal);
-}
-
-/* =========================
-   PROJECT LIBRARY
-========================= */
-
-.filter-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-bottom:35px;
-}
-
-.filter{
-  padding:9px 14px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  background:transparent;
-  font-size:11px;
-  font-weight:800;
-  cursor:pointer;
-}
-
-.filter.active,
-.filter:hover{
-  background:var(--navy);
-  color:white;
-  border-color:var(--navy);
-}
-
-.project-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.project-card{
-  background:var(--white);
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:28px;
-  min-height:290px;
-  display:flex;
-  flex-direction:column;
-  transition:.25s ease;
-  cursor:pointer;
-}
-
-.project-card:hover{
-  transform:translateY(-5px);
-  box-shadow:var(--shadow);
-}
-
-.project-card.hidden{
-  display:none;
-}
-
-.project-type{
-  color:var(--teal);
-  font-size:10px;
-  letter-spacing:.14em;
-  font-weight:800;
-  margin-bottom:25px;
-}
-
-.project-card h3{
-  font-size:24px;
-  line-height:1.1;
-  letter-spacing:-.025em;
-  margin-bottom:13px;
-}
-
-.project-card p{
-  font-size:14px;
-  color:var(--muted);
-  margin-bottom:20px;
-}
-
-.project-bottom{
-  margin-top:auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding-top:18px;
-  border-top:1px solid var(--line);
-}
-
-.project-arrow{
-  font-size:20px;
-}
-
-/* =========================
-   POLICY LAB
-========================= */
-
-.lab{
-  background:var(--navy);
-  color:white;
-}
-
-.lab .section-number{
-  color:#9bd0cc;
-}
-
-.lab .section-intro{
-  color:#aebfc2;
-}
-
-.lab-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-}
-
-.lab-card{
-  border:1px solid rgba(255,255,255,.18);
-  border-radius:20px;
-  padding:35px;
-  min-height:270px;
-  position:relative;
-  overflow:hidden;
-  transition:.25s;
-}
-
-.lab-card:hover{
-  background:rgba(255,255,255,.05);
-  transform:translateY(-3px);
-}
-
-.lab-card-number{
-  color:#86c4c0;
-  font-size:12px;
-  font-weight:800;
-  margin-bottom:50px;
-}
-
-.lab-card h3{
-  font-size:27px;
-  line-height:1.1;
-  margin-bottom:12px;
-}
-
-.lab-card p{
-  color:#aebfc2;
-  max-width:450px;
-}
-
-.lab-link{
-  position:absolute;
-  right:30px;
-  bottom:28px;
-  font-size:13px;
-  color:#a7d1ce;
-  font-weight:800;
-}
-
-/* =========================
-   METHODS
-========================= */
-
-.methods{
-  background:var(--paper2);
-}
-
-.method-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  border-top:1px solid var(--line);
-  border-left:1px solid var(--line);
-}
-
-.method{
-  padding:30px;
-  min-height:180px;
-  border-right:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
-
-.method-number{
-  color:var(--coral);
-  font-size:11px;
-  font-weight:800;
-  margin-bottom:20px;
-}
-
-.method h3{
-  font-size:21px;
-  margin-bottom:8px;
-}
-
-.method p{
-  color:var(--muted);
-  font-size:14px;
-}
-
-/* =========================
-   PROCESS
-========================= */
-
-.process{
-  display:grid;
-  grid-template-columns:repeat(6,1fr);
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
-
-.process-item{
-  padding:25px 18px;
-  border-right:1px solid var(--line);
-}
-
-.process-item:last-child{
-  border:none;
-}
-
-.process-item strong{
-  display:block;
-  color:var(--teal);
-  font-size:13px;
-  margin-bottom:8px;
-}
-
-.process-item span{
-  font-size:12px;
-  color:var(--muted);
-}
-
-/* =========================
-   FIELD & IMPACT
-========================= */
-
-.field-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-  align-items:center;
-}
-
-.field-copy h2{
-  font-size:clamp(35px,5vw,58px);
-  line-height:1;
-  letter-spacing:-.045em;
-  margin-bottom:25px;
-}
-
-.field-copy p{
-  color:var(--muted);
-  font-size:17px;
-  margin-bottom:22px;
-}
-
-.impact-box{
-  background:var(--navy);
-  color:white;
-  border-radius:24px;
-  padding:45px;
-}
-
-.impact-box h3{
-  font-size:25px;
-  margin-bottom:25px;
-}
-
-.impact-list{
-  list-style:none;
-}
-
-.impact-list li{
-  padding:14px 0;
-  border-bottom:1px solid rgba(255,255,255,.16);
-  font-size:14px;
-}
-
-.impact-list li:last-child{
-  border:none;
-}
-
-.impact-list strong{
-  color:#99cfcc;
-}
-
-/* =========================
-   EXPERIENCE
-========================= */
-
-.experience{
-  background:var(--white);
-}
-
-.timeline{
-  max-width:900px;
-}
-
-.timeline-item{
-  display:grid;
-  grid-template-columns:190px 1fr;
-  gap:45px;
-  padding:35px 0;
-  border-top:1px solid var(--line);
-}
-
-.timeline-date{
-  color:var(--teal);
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:.08em;
-}
-
-.timeline-item h3{
-  font-size:24px;
-  margin-bottom:5px;
-}
-
-.timeline-item h4{
-  font-size:13px;
-  color:var(--muted);
-  font-weight:600;
-  margin-bottom:15px;
-}
-
-.timeline-item p{
-  color:var(--muted);
-  font-size:14px;
-}
-
-/* =========================
-   CREDENTIALS
-========================= */
-
-.credentials{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-}
-
-.credential{
-  padding:30px;
-  border:1px solid var(--line);
-  border-radius:18px;
-  background:var(--paper);
-}
-
-.credential small{
-  color:var(--teal);
-  font-weight:800;
-  letter-spacing:.08em;
-}
-
-.credential h3{
-  margin:8px 0;
-}
-
-/* =========================
-   CONNECT
-========================= */
-
-.connect{
-  background:var(--coral);
-  color:white;
-  text-align:center;
-}
-
-.connect h2{
-  font-size:clamp(45px,7vw,85px);
-  letter-spacing:-.06em;
-  line-height:.95;
-  margin-bottom:25px;
-}
-
-.connect p{
-  max-width:550px;
-  margin:0 auto 30px;
-  color:#fff5f1;
-}
-
-.connect .btn{
-  border-color:white;
-  color:white;
-}
-
-.connect .btn:hover{
-  background:white;
-  color:var(--coral);
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-  background:#101c22;
-  color:#aebdc1;
-  padding:35px 0;
-}
-
-.footer-inner{
-  display:flex;
-  justify-content:space-between;
-  gap:30px;
-  align-items:center;
-}
-
-.footer-name{
-  color:white;
-  font-weight:800;
-  white-space:nowrap;
-}
-
-.footer-note{
-  font-size:12px;
-}
-
-/* =========================
-   MODAL
-========================= */
-
-.modal{
-  position:fixed;
-  inset:0;
-  background:rgba(9,20,25,.72);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
-  z-index:2000;
-}
-
-.modal.open{
-  display:flex;
-}
-
-.modal-box{
-  width:min(700px,100%);
-  max-height:90vh;
-  overflow:auto;
-  background:var(--white);
-  border-radius:22px;
-  padding:42px;
-  position:relative;
-}
-
-.close{
-  position:absolute;
-  right:20px;
-  top:17px;
-  border:none;
-  background:none;
-  font-size:28px;
-  cursor:pointer;
-}
-
-.modal-box h2{
-  font-size:40px;
-  line-height:1;
-  letter-spacing:-.04em;
-  margin:20px 0;
-}
-
-.modal-box p{
-  color:var(--muted);
-  margin-bottom:20px;
-}
-
-.modal-meta{
-  padding:18px;
-  background:var(--paper2);
-  border-radius:12px;
-  margin:20px 0;
-  font-size:13px;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:900px){
-
-  .hero-grid,
-  .featured-project,
-  .field-grid{
-    grid-template-columns:1fr;
-  }
-
-  .hero{
-    padding:80px 0;
-  }
-
-  .hero-card{
-    max-width:650px;
-  }
-
-  .metrics-grid{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  .metric{
-    border-bottom:1px solid rgba(255,255,255,.15);
-  }
-
-  .project-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .method-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .process{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  .process-item:nth-child(3){
-    border-right:none;
-  }
-
-}
-
-@media(max-width:650px){
-
-  .nav-inner{
-    min-height:64px;
-  }
-
-  .nav-links{
-    display:none;
-  }
-
-  section{
-    padding:75px 0;
-  }
-
-  .hero{
-    min-height:auto;
-  }
-
-  .hero h1{
-    font-size:48px;
-    white-space:normal;
-  }
-
-  .hero-subtitle{
-    font-size:22px;
-  }
-
-  .hero-card{
-    padding:28px;
-  }
-
-  .metrics-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .metric{
-    padding:15px;
-  }
-
-  .featured-visual{
-    min-height:400px;
-  }
-
-  .featured-content{
-    padding:30px;
-  }
-
-  .project-grid,
-  .method-grid{
-    grid-template-columns:1fr;
-  }
-
-  .process{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .process-item:nth-child(2),
-  .process-item:nth-child(4){
-    border-right:none;
-  }
-
-  .timeline-item{
-    grid-template-columns:1fr;
-    gap:10px;
-  }
-
-  .section-head{
-    display:block;
-  }
-
-  .section-intro{
-    margin-top:18px;
-  }
-
-  .footer-inner{
-    display:block;
-  }
-
-  .footer-note{
-    margin-top:10px;
-  }
-
-  .modal-box{
-    padding:30px 24px;
-  }
-
-  .modal-box h2{
-    font-size:32px;
-  }
-
-}
-
-/* Extra protection for the desktop hero name */
-@media(min-width:651px){
-  .hero h1{
-    white-space:nowrap;
-  }
-}
-
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Harini V S | Public Policy & Programme Management</title>
+
+  <meta
+    name="description"
+    content="Harini V S — Programme Management, Data-Driven Governance, Public Policy and Stakeholder Coordination."
+  />
+
+  <style>
+    :root {
+      --ink: #17252d;
+      --ink-soft: #40515a;
+      --muted: #6d7b81;
+      --paper: #f7f5ef;
+      --paper-2: #efede5;
+      --white: #ffffff;
+      --teal: #2e6f6b;
+      --teal-dark: #245653;
+      --coral: #c87558;
+      --line: #d8d8d0;
+      --shadow: 0 20px 60px rgba(23, 37, 45, 0.08);
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(calc(100% - 48px), var(--max));
+      margin: auto;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247, 245, 239, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(216, 216, 208, 0.8);
+    }
+
+    .nav-inner {
+      max-width: var(--max);
+      margin: auto;
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink-soft);
+    }
+
+    .nav-links a {
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--teal);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      padding: 110px 0 95px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border: 1px solid rgba(46, 111, 107, 0.12);
+      border-radius: 50%;
+      right: -180px;
+      top: -180px;
+    }
+
+    .eyebrow {
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(52px, 8vw, 108px);
+      line-height: 0.95;
+      font-weight: 500;
+      letter-spacing: -0.045em;
+      margin-bottom: 30px;
+      white-space: nowrap;
+    }
+
+    .hero h2 {
+      max-width: 790px;
+      font-size: clamp(25px, 3.5vw, 44px);
+      line-height: 1.15;
+      font-weight: 500;
+      letter-spacing: -0.025em;
+      margin-bottom: 25px;
+    }
+
+    .hero-description {
+      max-width: 700px;
+      color: var(--ink-soft);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 19px;
+      border-radius: 3px;
+      font-size: 13px;
+      font-weight: 700;
+      border: 1px solid var(--ink);
+      transition: all 0.2s ease;
+    }
+
+    .button.primary {
+      background: var(--ink);
+      color: white;
+    }
+
+    .button.primary:hover {
+      background: var(--teal);
+      border-color: var(--teal);
+    }
+
+    .button.secondary:hover {
+      background: var(--white);
+    }
+
+    /* =========================
+       METRICS
+    ========================= */
+
+    .metrics {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 34px 0;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .metric {
+      border-left: 2px solid var(--teal);
+      padding-left: 18px;
+    }
+
+    .metric strong {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      font-weight: 500;
+      line-height: 1.1;
+      margin-bottom: 7px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    /* =========================
+       SECTION
+    ========================= */
+
+    section {
+      padding: 105px 0;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 48px;
+    }
+
+    .section-number {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--coral);
+      letter-spacing: 0.14em;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: -0.035em;
+    }
+
+    .section-intro {
+      max-width: 470px;
+      color: var(--ink-soft);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    /* =========================
+       FEATURED
+    ========================= */
+
+    .featured {
+      background: var(--ink);
+      color: white;
+    }
+
+    .featured .section-number {
+      color: #d99378;
+    }
+
+    .featured .section-intro {
+      color: #b9c4c7;
+    }
+
+    .featured-card {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      min-height: 460px;
+      background: #20333a;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .featured-main {
+      padding: 55px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .featured-label {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #9cc8c4;
+      font-weight: 800;
+    }
+
+    .featured-main h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(38px, 4vw, 62px);
+      font-weight: 500;
+      line-height: 1.05;
+      max-width: 680px;
+      margin: 25px 0;
+    }
+
+    .featured-main p {
+      color: #c3ced1;
+      max-width: 620px;
+      line-height: 1.8;
+    }
+
+    .featured-link {
+      display: inline-flex;
+      margin-top: 30px;
+      color: white;
+      font-size: 13px;
+      font-weight: 800;
+      border-bottom: 1px solid #9cc8c4;
+      padding-bottom: 5px;
+      width: fit-content;
+    }
+
+    .featured-side {
+      padding: 45px;
+      border-left: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 28px;
+    }
+
+    .pillar {
+      border-top: 1px solid rgba(255,255,255,0.14);
+      padding-top: 18px;
+    }
+
+    .pillar-number {
+      color: #8ebcb8;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .pillar h4 {
+      margin-top: 7px;
+      font-size: 16px;
+    }
+
+    .pillar p {
+      color: #aebbc0;
+      font-size: 13px;
+      margin-top: 6px;
+    }
+
+    /* =========================
+       WORK FILTERS
+    ========================= */
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 34px;
+    }
+
+    .filter {
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid var(--line);
+      padding: 9px 14px;
+      color: var(--ink-soft);
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 30px;
+      transition: all 0.2s ease;
+    }
+
+    .filter:hover,
+    .filter.active {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: white;
+    }
+
+    /* =========================
+       PROJECT GRID
+    ========================= */
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .project-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 30px;
+      min-height: 290px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: rgba(46, 111, 107, 0.35);
+    }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .project-index {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      color: var(--coral);
+    }
+
+    .project-category {
+      color: var(--teal);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-align: right;
+    }
+
+    .project-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      line-height: 1.12;
+      font-weight: 500;
+      margin: 35px 0 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .project-card .subtitle {
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .project-card p {
+      color: var(--ink-soft);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .project-more {
+      margin-top: 24px;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--ink);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* =========================
+       POLICY LAB
+    ========================= */
+
+    .lab {
+      background: var(--paper-2);
+    }
+
+    .lab-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .lab-card {
+      background: var(--white);
+      padding: 35px;
+      border: 1px solid var(--line);
+    }
+
+    .lab-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .lab-card p {
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .lab-tag {
+      display: inline-block;
+      color: var(--teal);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 20px;
+    }
+
+    /* =========================
+       METHOD
+    ========================= */
+
+    .method {
+      background: var(--white);
+    }
+
+    .method-flow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .method-step {
+      padding: 30px 22px;
+      border-right: 1px solid var(--line);
+    }
+
+    .method-step:last-child {
+      border-right: none;
+    }
+
+    .method-step span {
+      color: var(--coral);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .method-step h3 {
+      margin-top: 12px;
+      font-size: 17px;
+    }
+
+    .method-step p {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    /* =========================
+       FIELD IMPACT
+    ========================= */
+
+    .impact {
+      background: var(--teal);
+      color: white;
+    }
+
+    .impact .section-number {
+      color: #b7d8d4;
+    }
+
+    .impact .section-intro {
+      color: #d4e4e2;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .impact h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(38px, 5vw, 60px);
+      font-weight: 500;
+      line-height: 1.05;
+    }
+
+    .impact-copy {
+      color: #d8e7e5;
+      line-height: 1.8;
+      margin-top: 25px;
+      max-width: 590px;
+    }
+
+    .impact-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .impact-stat {
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 25px;
+    }
+
+    .impact-stat strong {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 38px;
+      font-weight: 500;
+    }
+
+    .impact-stat span {
+      color: #c6ddda;
+      font-size: 12px;
+    }
+
+    /* =========================
+       EXPERIENCE
+    ========================= */
+
+    .experience-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .experience-item {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 45px;
+      padding: 35px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .experience-date {
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .experience-item h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 27px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .experience-place {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    .experience-item p {
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.8;
+      max-width: 760px;
+    }
+
+    /* =========================
+       CREDENTIALS
+    ========================= */
+
+    .credentials {
+      background: var(--paper-2);
+    }
+
+    .credential-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .credential-card {
+      background: white;
+      border: 1px solid var(--line);
+      padding: 30px;
+      min-height: 180px;
+    }
+
+    .credential-card small {
+      color: var(--coral);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .credential-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+      font-weight: 500;
+      margin-top: 17px;
+    }
+
+    .credential-card p {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 7px;
+    }
+
+    /* =========================
+       CONNECT
+    ========================= */
+
+    .connect {
+      padding-bottom: 70px;
+    }
+
+    .connect-box {
+      background: var(--ink);
+      color: white;
+      padding: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .connect-box h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(38px, 5vw, 65px);
+      line-height: 1;
+      font-weight: 500;
+    }
+
+    .connect-box p {
+      color: #b9c4c7;
+      margin-top: 15px;
+      max-width: 550px;
+    }
+
+    .connect-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-width: 210px;
+    }
+
+    .connect-links a {
+      border-bottom: 1px solid rgba(255,255,255,0.25);
+      padding-bottom: 10px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .connect-links a:hover {
+      color: #9cc8c4;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    footer .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* =========================
+       MODAL
+    ========================= */
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(16, 25, 30, 0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+    }
+
+    .modal.open {
+      display: flex;
+    }
+
+    .modal-content {
+      background: var(--paper);
+      width: min(720px, 100%);
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 45px;
+      position: relative;
+      box-shadow: 0 30px 100px rgba(0,0,0,0.25);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      border: none;
+      background: transparent;
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--ink);
+    }
+
+    .modal-category {
+      color: var(--teal);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .modal h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 42px;
+      font-weight: 500;
+      line-height: 1.1;
+      margin: 18px 0;
+    }
+
+    .modal p {
+      color: var(--ink-soft);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .modal-subtitle {
+      color: var(--teal);
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      .nav-inner {
+        padding: 0 24px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .metric-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .featured-card,
+      .impact-grid,
+      .connect-box {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-side {
+        border-left: none;
+        border-top: 1px solid rgba(255,255,255,0.1);
+      }
+
+      .featured-main {
+        padding: 40px;
+      }
+
+      .featured-side {
+        padding: 40px;
+      }
+
+      .method-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .method-step:nth-child(2) {
+        border-right: none;
+      }
+
+      .method-step:nth-child(3),
+      .method-step:nth-child(4),
+      .method-step:nth-child(5) {
+        border-top: 1px solid var(--line);
+      }
+
+      .credential-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .connect-box {
+        display: grid;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .container {
+        width: min(calc(100% - 30px), var(--max));
+      }
+
+      .hero {
+        padding: 75px 0 65px;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+        white-space: normal;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .section-header {
+        display: block;
+      }
+
+      .section-intro {
+        margin-top: 20px;
+      }
+
+      .metric-grid,
+      .project-grid,
+      .lab-grid,
+      .credential-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-main,
+      .featured-side {
+        padding: 30px;
+      }
+
+      .featured-main h3 {
+        font-size: 39px;
+      }
+
+      .method-flow {
+        grid-template-columns: 1fr;
+      }
+
+      .method-step {
+        border-right: none !important;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .method-step:last-child {
+        border-bottom: none;
+      }
+
+      .experience-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .connect-box {
+        padding: 38px 30px;
+      }
+
+      footer .footer-inner {
+        flex-direction: column;
+      }
+
+      .modal-content {
+        padding: 35px 25px;
+      }
+
+      .modal h2 {
+        font-size: 34px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
 
-<nav>
+  <nav>
+    <div class="nav-inner">
 
-  <div class="container nav-inner">
+      <a href="#home" class="brand">
+        HARINI V S
+      </a>
 
-    <a href="#home" class="logo">
-      HARINI V S
-    </a>
-
-    <div class="nav-links">
-      <a href="#work">WORK</a>
-      <a href="#lab">POLICY LAB</a>
-      <a href="#methods">METHODS</a>
-      <a href="#experience">EXPERIENCE</a>
-      <a href="#connect">CONNECT</a>
-    </div>
-
-  </div>
-
-</nav>
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<header class="hero" id="home">
-
-  <div class="container hero-grid">
-
-    <div>
-
-      <div class="eyebrow">
-        PUBLIC POLICY · PROGRAMME MANAGEMENT · GOVERNANCE
-      </div>
-
-      <h1>Harini V S</h1>
-
-      <div class="hero-subtitle">
-        Turning evidence into decisions, programmes and public value.
-      </div>
-
-      <p class="hero-description">
-        I work at the intersection of policy, programme delivery, data and
-        communities — combining public administration, grassroots experience,
-        evidence synthesis, technology and stakeholder coordination to understand
-        public problems and design better implementation.
-      </p>
-
-      <div class="hero-buttons">
-
-        <a class="btn btn-primary" href="#work">
-          Explore my work →
-        </a>
-
-        <a
-          class="btn btn-secondary"
-          href="https://www.linkedin.com/in/harini-v-s-8a5a9a424"
-          target="_blank"
-          rel="noopener">
-          LinkedIn ↗
-        </a>
-
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#lab">Policy Lab</a>
+        <a href="#methods">Methods</a>
+        <a href="#experience">Experience</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#connect">Connect</a>
       </div>
 
     </div>
+  </nav>
 
 
-    <div class="hero-card">
+  <!-- =========================
+       HERO
+  ========================= -->
 
-      <div class="visual-label">
-        HOW I APPROACH PUBLIC PROBLEMS
-      </div>
+  <main id="home">
 
-      <h3>
-        From lived realities<br>
-        to measurable action.
-      </h3>
+    <section class="hero">
 
-      <div class="pipeline">
+      <div class="container">
 
-        <div>
-          <span>01</span>
-          FIELD
+        <div class="eyebrow">
+          Public Policy · Programme Management · Governance
         </div>
 
-        <div>
-          <span>02</span>
-          DATA
-        </div>
+        <h1>Harini V S</h1>
 
-        <div>
-          <span>03</span>
-          INSTITUTIONS
-        </div>
-
-        <div>
-          <span>04</span>
-          POLICY
-        </div>
-
-        <div>
-          <span>05</span>
-          IMPLEMENTATION
-        </div>
-
-        <div>
-          <span>06</span>
-          IMPACT
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</header>
-
-
-<!-- =========================
-     METRICS
-========================= -->
-
-<div class="metrics">
-
-  <div class="container metrics-grid">
-
-    <div class="metric">
-      <strong>5+</strong>
-      <span>Years programme & policy experience</span>
-    </div>
-
-    <div class="metric">
-      <strong>12</strong>
-      <span>Independent policy projects</span>
-    </div>
-
-    <div class="metric">
-      <strong>133K+</strong>
-      <span>Learning platform subscribers</span>
-    </div>
-
-    <div class="metric">
-      <strong>30M+</strong>
-      <span>Learning platform views</span>
-    </div>
-
-    <div class="metric">
-      <strong>800+</strong>
-      <span>Open-access lessons</span>
-    </div>
-
-  </div>
-
-</div>
-
-
-<!-- =========================
-     FEATURED WORK
-========================= -->
-
-<section class="featured" id="work">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div>
-
-        <div class="section-number">
-          01 / FEATURED WORK
-        </div>
-
-        <h2 class="section-title">
-          A constituency,<br>
-          seen as a system.
+        <h2>
+          Turning evidence into decisions, programmes and public value.
         </h2>
 
-      </div>
-
-      <p class="section-intro">
-        Policy analysis becomes more useful when it moves beyond identifying
-        a problem and starts mapping institutions, implementation constraints
-        and citizen outcomes.
-      </p>
-
-    </div>
-
-
-    <div class="featured-project">
-
-      <div class="featured-visual">
-
-        <div class="visual-label">
-          CONSTITUENCY POLICY DOSSIER
-        </div>
-
-        <div class="island-diagram">
-          <div class="island"></div>
-        </div>
-
-        <div class="visual-title">
-          Andaman & Nicobar Constituency Policy Dossier
-        </div>
-
-      </div>
-
-
-      <div class="featured-content">
-
-        <div class="tag-row">
-
-          <span class="tag">
-            CONSTITUENCY POLICY
-          </span>
-
-          <span class="tag">
-            CONNECTIVITY
-          </span>
-
-          <span class="tag">
-            GOVERNANCE
-          </span>
-
-          <span class="tag">
-            PUBLIC SERVICES
-          </span>
-
-        </div>
-
-        <h3>
-          Connectivity is not one problem.
-          It is a system of linked public-service questions.
-        </h3>
-
-        <p>
-          This dossier examines the Andaman & Nicobar archipelago through
-          three interconnected policy challenges — connecting people and goods,
-          managing reverse logistics for municipal waste, and creating reliable
-          emergency maritime healthcare corridors.
+        <p class="hero-description">
+          Programme management, data-driven governance and policy research
+          at the intersection of evidence, technology, institutions and
+          communities.
         </p>
 
-        <div class="pillars">
+        <div class="hero-actions">
 
-          <div class="pillar">
-            <b>01</b>
-            Passenger & freight shipping parity
+          <a href="#work" class="button primary">
+            Explore my work
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/harini-v-s-8a5a9a424"
+            target="_blank"
+            class="button secondary"
+          >
+            LinkedIn ↗
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         METRICS
+    ========================= -->
+
+    <div class="metrics">
+
+      <div class="container">
+
+        <div class="metric-grid">
+
+          <div class="metric">
+            <strong>5+</strong>
+            <span>Years across programme delivery, policy research and stakeholder coordination</span>
           </div>
 
-          <div class="pillar">
-            <b>02</b>
-            Reverse logistics for municipal waste
+          <div class="metric">
+            <strong>10</strong>
+            <span>Selected independent policy and governance works</span>
           </div>
 
-          <div class="pillar">
-            <b>03</b>
-            Emergency maritime healthcare corridors
+          <div class="metric">
+            <strong>133K+</strong>
+            <span>Subscribers reached through an open-access grassroots learning platform</span>
+          </div>
+
+          <div class="metric">
+            <strong>30M+</strong>
+            <span>Learning-platform views across 800+ open-access lessons</span>
           </div>
 
         </div>
 
-        <a
-          class="btn btn-primary"
-          href="https://heyzine.com/flip-book/9bf2ae2e77.html"
-          target="_blank"
-          rel="noopener">
-          Open full dossier ↗
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     PROJECT LIBRARY
-========================= -->
-
-<section id="projects">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div>
-
-        <div class="section-number">
-          02 / PROJECT LIBRARY
-        </div>
-
-        <h2 class="section-title">
-          Selected<br>
-          policy work.
-        </h2>
-
-      </div>
-
-      <p class="section-intro">
-        A portfolio spanning governance, urban development, digital public
-        services, industrial policy, technology, employment and evidence.
-      </p>
-
-    </div>
-
-
-    <div class="filter-row">
-
-      <button class="filter active" data-filter="all">
-        ALL WORK
-      </button>
-
-      <button class="filter" data-filter="policy">
-        POLICY & GOVERNANCE
-      </button>
-
-      <button class="filter" data-filter="development">
-        PROGRAMME & DEVELOPMENT
-      </button>
-
-      <button class="filter" data-filter="digital">
-        DIGITAL GOVERNANCE
-      </button>
-
-      <button class="filter" data-filter="communication">
-        POLICY COMMUNICATION
-      </button>
-
-    </div>
-
-
-    <div class="project-grid">
-
-
-      <article
-        class="project-card"
-        data-category="policy"
-        onclick="openProject(1)">
-
-        <div class="project-type">
-          INSTITUTIONAL ANALYSIS
-        </div>
-
-        <h3>
-          Government Engine Mapping
-        </h3>
-
-        <p>
-          Mapping a Union Cabinet decision through political,
-          administrative, legislative and judicial lenses.
-        </p>
-
-        <div class="project-bottom">
-          <span>Framework-based research</span>
-          <span class="project-arrow">↗</span>
-        </div>
-
-      </article>
-
-
-      <article
-        class="project-card"
-        data-category="digital"
-        onclick="openProject(2)">
-
-        <div class="project-type">
-          AI GOVERNANCE
-        </div>
-
-        <h3>
-          Project DRISHTI
-        </h3>
-
-        <p>
-          Exploring where AI-assisted railway inspection should end
-          and human accountability should begin.
-        </p>
-
-        <div class="project-bottom">
-          <span>AI · accountability</span>
-          <span class="project-arrow">↗</span>
-        </div>
-
-      </article>
-
-
-      <article
-        class="project-card"
-        data-category="policy"
-        onclick="openProject(3)">
-
-        <div class="project-type">
-          GEOSPATIAL POLICY
-        </div>
-
-        <h3>
-          National Geospatial Policy 2022
-        </h3>
-
-        <p>
-          Examining India's shift toward greater geospatial data openness
-          and the gap between availability and actual policy impact.
-        </p>
-
-        <div class="project-bottom">
-          <span>Technology · governance</span>
-          <span class="project-arrow">↗</span>
-        </div>
-
-      </article>
-
-
-      <article
-        class="project-card"
-        data-category="digital"
-        onclick="openProject(4)">
-
-        <div class="project-type">
-          STRATEGIC TECHNOLOGY
-        </div>
-
-        <h3>
-          India's Homegrown AI
-        </h3>
-
-        <p>
-          Comparative policy analysis of India's emerging AI ecosystem
-          against global AI labs.
-        </p>
-
-        <div class="project-bottom">
-          <span>Comparative analysis</span>
-          <span class="project-arrow">↗</span>
-        </div>
-
-      </article>
-
-
-      <article
-        class="project-card"
-        data-category="development"
-        onclick="openProject(5)">
-
-        <div class="project-type">
-          URBAN MOBILITY
-        </div>
-
-        <h3>
-          Employment-Oriented Transit Development
-        </h3>
-
-        <p>
-          Reframing transport success around access to employment rather
-          than infrastructure delivered alone.
-        </p>
-
-        <div class="project-bottom">
-          <span>ToC · Logframe · M&E</span>
-          <span class="project-arrow">↗</span>
-        </div>
-
-      </article>
-
-
-      <article
-        class="project-card"
-        data-category="development"
-        onclick="openProject(6)">
-
-        <div class="project-type">
-          ENVIRONMENTAL POLICY
-        </div>
-
-        <h3>
-          Tamil Nadu Circular Economy Investment Policy
-        </h3>
-
-        <p>
-          Examining whether incentives and implementation mechanisms
-          actually align with sustainability goals.
-        </p>
-
-        <div class="project-bottom">
-          <span>Incentive analysis</span>
-          <span class="project-arrow">↗</span>
-        </div>
-
-      </article>
-
-
-      <article
-        class="project-card"
-        data-category="communication"
-        onclick="openProject(7)">
-
-        <div class="project-type">
-          STAKEHOLDER ANALYSIS
-        </div>
-
-        <h3>
-          The Campus That Could Not Agree
-        </h3>
-
-        <p>
-          An interactive perspective-shift exercise showing how the same
-          evidence can create different policy problems for different stakeholders.
-        </p>
-
-        <div class="project-bottom">
-          <span>Stakeholder matrix</span>
-          <span class="project-arrow">↗</span>
-        </div>
-
-      </article>
-
-
-      <article
-        class="project-card"
-        data-category="digital"
-        onclick="openProject(8)">
-
-        <div class="project-type">
-          CIVIC-TECH SIMULATION
-        </div>
-
-        <h3>
-          Crisis Command & Citizen Continuity Terminal
-        </h3>
-
-        <p>
-          A simulation of statewide digital public-service failure and
-          the administrative response required to preserve citizen access.
-        </p>
-
-        <div class="project-bottom">
-          <span>Digital governance</span>
-          <span class="project-arrow">↗</span>
-        </div>
-
-      </article>
-
-
-      <article
-        class="project-card"
-        data-category="development"
-        onclick="openProject(9)">
-
-        <div class="project-type">
-          INDUSTRIAL POLICY
-        </div>
-
-        <h3>
-          From Factory to Ecosystem
-        </h3>
-
-        <p>
-          A Tier-2 industrial-hub case study examining manufacturing
-          multipliers, MSME linkages and local value creation.
-        </p>
-
-        <div class="project-bottom">
-          <span>Tirupur cluster</span>
-          <span class="project-arrow">↗</span>
-        </div>
-
-      </article>
-
-
-      <article
-        class="project-card"
-        data-category="digital"
-        onclick="openProject(10)">
-
-        <div class="project-type">
-          URBAN DATA
-        </div>
-
-        <h3>
-          Data-Rich, Decision-Poor
-        </h3>
-
-        <p>
-          Exploring how cities can move from collecting data to making
-          frontline decisions with usable information.
-        </p>
-
-        <div class="project-bottom">
-          <span>GIS · municipal governance</span>
-          <span class="project-arrow">↗</span>
-        </div>
-
-      </article>
-
-
-      <article
-        class="project-card"
-        data-category="development"
-        onclick="openProject(11)">
-
-        <div class="project-type">
-          SKILLS & EMPLOYMENT
-        </div>
-
-        <h3>
-          Skilling for the Future
-        </h3>
-
-        <p>
-          Policy research on the gap between training outputs and
-          meaningful employment outcomes for urban youth.
-        </p>
-
-        <div class="project-bottom">
-          <span>Evidence synthesis</span>
-          <span class="project-arrow">↗</span>
-        </div>
-
-      </article>
-
-
-      <article
-        class="project-card"
-        data-category="policy"
-        onclick="openProject(12)">
-
-        <div class="project-type">
-          CONSTITUENCY POLICY
-        </div>
-
-        <h3>
-          Andaman & Nicobar Dossier
-        </h3>
-
-        <p>
-          A constituency-level policy dossier connecting transport,
-          waste systems and emergency healthcare.
-        </p>
-
-        <div class="project-bottom">
-          <span>Interactive flipbook</span>
-          <span class="project-arrow">↗</span>
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     POLICY LAB
-========================= -->
-
-<section class="lab" id="lab">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div>
-
-        <div class="section-number">
-          03 / POLICY LAB
-        </div>
-
-        <h2 class="section-title">
-          Policy, but<br>
-          interactive.
-        </h2>
-
-      </div>
-
-      <p class="section-intro">
-        I use visual frameworks, simulations and lightweight digital tools
-        to make policy problems easier to understand, interrogate and communicate.
-      </p>
-
-    </div>
-
-
-    <div class="lab-grid">
-
-      <div class="lab-card">
-
-        <div class="lab-card-number">
-          LAB / 01
-        </div>
-
-        <h3>
-          Digital Public Service Failure Simulation
-        </h3>
-
-        <p>
-          A civic-tech simulation that puts administrative continuity at
-          the centre of a statewide digital service disruption.
-        </p>
-
-        <span class="lab-link">
-          CIVIC-TECH · HTML
-        </span>
-
-      </div>
-
-
-      <div class="lab-card">
-
-        <div class="lab-card-number">
-          LAB / 02
-        </div>
-
-        <h3>
-          The Campus That Could Not Agree
-        </h3>
-
-        <p>
-          Stakeholder matrix, evidence spectrum and data-source filters
-          designed to demonstrate how policy framing changes with perspective.
-        </p>
-
-        <span class="lab-link">
-          STAKEHOLDER MAPPING
-        </span>
-
-      </div>
-
-
-      <div class="lab-card">
-
-        <div class="lab-card-number">
-          LAB / 03
-        </div>
-
-        <h3>
-          Government Engine Mapping
-        </h3>
-
-        <p>
-          A framework for understanding how political decisions move
-          through administrative, legislative and judicial institutions.
-        </p>
-
-        <span class="lab-link">
-          INSTITUTIONAL MAPPING
-        </span>
-
-      </div>
-
-
-      <div class="lab-card">
-
-        <div class="lab-card-number">
-          LAB / 04
-        </div>
-
-        <h3>
-          Data-Rich, Decision-Poor
-        </h3>
-
-        <p>
-          A visual exploration of the distance between data collection,
-          information usability and frontline administrative action.
-        </p>
-
-        <span class="lab-link">
-          DATA → DECISION
-        </span>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     RESEARCH & METHODS
-========================= -->
-
-<section class="methods" id="methods">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div>
-
-        <div class="section-number">
-          04 / RESEARCH & METHODS
-        </div>
-
-        <h2 class="section-title">
-          How I<br>
-          work.
-        </h2>
-
-      </div>
-
-      <p class="section-intro">
-        A practical policy toolkit built across research, programme delivery,
-        quantitative analysis, monitoring and technology.
-      </p>
-
-    </div>
-
-
-    <div class="process">
-
-      <div class="process-item">
-        <strong>01 / FRAME</strong>
-        <span>Define the public problem.</span>
-      </div>
-
-      <div class="process-item">
-        <strong>02 / INVESTIGATE</strong>
-        <span>Build an evidence base.</span>
-      </div>
-
-      <div class="process-item">
-        <strong>03 / MAP</strong>
-        <span>Understand actors & institutions.</span>
-      </div>
-
-      <div class="process-item">
-        <strong>04 / DESIGN</strong>
-        <span>Develop feasible interventions.</span>
-      </div>
-
-      <div class="process-item">
-        <strong>05 / MEASURE</strong>
-        <span>Define outcomes & indicators.</span>
-      </div>
-
-      <div class="process-item">
-        <strong>06 / COMMUNICATE</strong>
-        <span>Make the analysis usable.</span>
       </div>
 
     </div>
 
 
-    <br><br><br>
+    <!-- =========================
+         FEATURED WORK
+    ========================= -->
 
+    <section class="featured">
 
-    <div class="method-grid">
+      <div class="container">
 
-      <div class="method">
+        <div class="section-header">
 
-        <div class="method-number">01</div>
+          <div>
+            <div class="section-number">01 / FEATURED WORK</div>
 
-        <h3>Policy Research</h3>
+            <h2 class="section-title">
+              A constituency-level<br />
+              policy dossier.
+            </h2>
+          </div>
 
-        <p>
-          Policy briefs, dossiers, literature reviews, institutional
-          synthesis and governance analysis.
-        </p>
-
-      </div>
-
-
-      <div class="method">
-
-        <div class="method-number">02</div>
-
-        <h3>Data Analysis</h3>
-
-        <p>
-          Survey datasets, NFHS, Census, NITI Aayog indices and
-          quantitative evidence synthesis.
-        </p>
-
-      </div>
-
-
-      <div class="method">
-
-        <div class="method-number">03</div>
-
-        <h3>Theory of Change</h3>
-
-        <p>
-          Translating interventions into outcomes, assumptions and
-          measurable pathways of change.
-        </p>
-
-      </div>
-
-
-      <div class="method">
-
-        <div class="method-number">04</div>
-
-        <h3>M&E Frameworks</h3>
-
-        <p>
-          Logframes, KPIs, indicators, performance metrics and
-          implementation monitoring.
-        </p>
-
-      </div>
-
-
-      <div class="method">
-
-        <div class="method-number">05</div>
-
-        <h3>Stakeholder Coordination</h3>
-
-        <p>
-          Working across institutions, educators, communities,
-          clients and cross-functional teams.
-        </p>
-
-      </div>
-
-
-      <div class="method">
-
-        <div class="method-number">06</div>
-
-        <h3>Digital Policy Communication</h3>
-
-        <p>
-          Interactive tools, dashboards, visual briefs, flipbooks and
-          policy storytelling.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     FIELD & IMPACT
-========================= -->
-
-<section id="field">
-
-  <div class="container field-grid">
-
-    <div class="field-copy">
-
-      <div class="section-number">
-        05 / FIELD & IMPACT
-      </div>
-
-      <h2>
-        Policy is ultimately
-        experienced by people.
-      </h2>
-
-      <p>
-        My interest in implementation comes from grassroots programme work —
-        not only studying systems, but coordinating people, listening to feedback
-        and adapting delivery around real constraints.
-      </p>
-
-      <p>
-        As Co-Founder & Program Lead of an open-access grassroots digital learning
-        initiative, I worked with government-school educators, rural learners
-        and parents to create and distribute bilingual learning resources.
-      </p>
-
-    </div>
-
-
-    <div class="impact-box">
-
-      <h3>
-        Grassroots Education Initiative
-      </h3>
-
-      <ul class="impact-list">
-
-        <li>
-          <strong>800+</strong>
-          open-access lessons
-        </li>
-
-        <li>
-          <strong>133K+</strong>
-          subscribers
-        </li>
-
-        <li>
-          <strong>30M+</strong>
-          views
-        </li>
-
-        <li>
-          <strong>Tamil + English</strong>
-          bilingual delivery
-        </li>
-
-        <li>
-          <strong>Ground feedback</strong>
-          from rural students & parents
-        </li>
-
-        <li>
-          <strong>Programme coordination</strong>
-          across educators, learners and families
-        </li>
-
-      </ul>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     EXPERIENCE
-========================= -->
-
-<section class="experience" id="experience">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <div>
-
-        <div class="section-number">
-          06 / EXPERIENCE
-        </div>
-
-        <h2 class="section-title">
-          A path across<br>
-          three worlds.
-        </h2>
-
-      </div>
-
-      <p class="section-intro">
-        Engineering gave me systems thinking. Grassroots work gave me
-        implementation perspective. Public policy gave me the language
-        to connect the two.
-      </p>
-
-    </div>
-
-
-    <div class="timeline">
-
-
-      <div class="timeline-item">
-
-        <div class="timeline-date">
-          2021 — 2025
-        </div>
-
-        <div>
-
-          <h3>
-            Freelance Policy Researcher & Academic Content Writer
-          </h3>
-
-          <h4>
-            Independent Policy & Academic Consulting · Chennai
-          </h4>
-
-          <p>
-            Authored policy dossiers, legislative briefs, literature reviews
-            and institutional syntheses; analysed survey data and governance
-            indices; developed Theory of Change frameworks and policy briefs.
+          <p class="section-intro">
+            A policy analysis of connectivity and public-service challenges
+            across the Andaman & Nicobar archipelago.
           </p>
 
         </div>
 
-      </div>
+
+        <div class="featured-card">
+
+          <div class="featured-main">
+
+            <div>
+
+              <div class="featured-label">
+                Featured Policy Work
+              </div>
+
+              <h3>
+                Andaman & Nicobar Constituency Policy Dossier
+              </h3>
+
+              <p>
+                A constituency-focused policy dossier examining how
+                infrastructure, logistics and emergency-service gaps affect
+                connectivity and public value across an island geography.
+              </p>
+
+            </div>
+
+            <a
+              href="https://heyzine.com/flip-book/9bf2ae2e77.html"
+              target="_blank"
+              class="featured-link"
+            >
+              Open interactive dossier ↗
+            </a>
+
+          </div>
 
 
-      <div class="timeline-item">
+          <div class="featured-side">
 
-        <div class="timeline-date">
-          2020 — 2025
+            <div class="pillar">
+              <div class="pillar-number">01</div>
+              <h4>Passenger & freight shipping parity</h4>
+              <p>
+                Examining connectivity and transport constraints.
+              </p>
+            </div>
+
+            <div class="pillar">
+              <div class="pillar-number">02</div>
+              <h4>Reverse logistics for municipal waste</h4>
+              <p>
+                Exploring the policy challenge of waste movement in an
+                island geography.
+              </p>
+            </div>
+
+            <div class="pillar">
+              <div class="pillar-number">03</div>
+              <h4>Emergency maritime healthcare corridors</h4>
+              <p>
+                Connecting geography, healthcare access and emergency
+                response.
+              </p>
+            </div>
+
+          </div>
+
         </div>
 
-        <div>
+      </div>
 
-          <h3>
-            Co-Founder & Program Lead — Community Outreach
-          </h3>
+    </section>
 
-          <h4>
-            Open-Access Grassroots Digital Learning Platform · Tamil Nadu
-          </h4>
 
-          <p>
-            Led a bilingual open-access education programme, coordinating
-            teachers, parents and learners while tracking reach, engagement
-            and ground feedback.
+    <!-- =========================
+         ALL WORK
+    ========================= -->
+
+    <section id="work">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div>
+            <div class="section-number">02 / SELECTED POLICY WORKS</div>
+
+            <h2 class="section-title">
+              All Work
+            </h2>
+          </div>
+
+          <p class="section-intro">
+            A curated body of independent policy research, programme design,
+            governance analysis and implementation thinking.
           </p>
 
         </div>
 
-      </div>
 
+        <!-- FILTERS -->
 
-      <div class="timeline-item">
+        <div class="filters">
 
-        <div class="timeline-date">
-          2017 — 2018
+          <button class="filter active" data-filter="all">
+            All
+          </button>
+
+          <button class="filter" data-filter="Policy & Governance">
+            Policy & Governance
+          </button>
+
+          <button class="filter" data-filter="Programme & Development">
+            Programme & Development
+          </button>
+
+          <button class="filter" data-filter="Digital Governance">
+            Digital Governance
+          </button>
+
+          <button class="filter" data-filter="Policy Communication">
+            Policy Communication
+          </button>
+
         </div>
 
-        <div>
 
-          <h3>
-            Associate Software Engineer
-          </h3>
+        <!-- PROJECT GRID -->
 
-          <h4>
-            Accenture Solutions Pvt. Ltd. · Chennai
-          </h4>
+        <div id="projectGrid" class="project-grid"></div>
 
-          <p>
-            Delivered SAP ABAP and SAP FICO workflows, automated reporting
-            and technical documentation while coordinating with client
-            and cross-functional teams.
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         POLICY LAB
+    ========================= -->
+
+    <section id="lab" class="lab">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div>
+            <div class="section-number">03 / POLICY LAB</div>
+
+            <h2 class="section-title">
+              Policy thinking,<br />
+              made interactive.
+            </h2>
+          </div>
+
+          <p class="section-intro">
+            Experiments that turn policy problems into frameworks,
+            simulations, stakeholder maps and decision tools.
           </p>
 
         </div>
 
-      </div>
+
+        <div class="lab-grid">
+
+          <div class="lab-card">
+
+            <div class="lab-tag">
+              Civic-Tech Simulation
+            </div>
+
+            <h3>
+              Crisis Command & Citizen Continuity
+            </h3>
+
+            <p>
+              An interactive public-service failure simulation examining
+              frontline administrative bottlenecks, triage and service
+              recovery when digital systems fail.
+            </p>
+
+          </div>
 
 
-    </div>
+          <div class="lab-card">
 
-  </div>
+            <div class="lab-tag">
+              Stakeholder Mapping
+            </div>
 
-</section>
+            <h3>
+              The Campus That Could Not Agree
+            </h3>
+
+            <p>
+              A perspective-shift exercise using stakeholder mapping,
+              evidence classification and data-source filters to show how
+              different actors can interpret the same policy problem.
+            </p>
+
+          </div>
 
 
-<!-- =========================
-     CREDENTIALS
-========================= -->
+          <div class="lab-card">
 
-<section>
+            <div class="lab-tag">
+              Institutional Analysis
+            </div>
 
-  <div class="container">
+            <h3>
+              Framework-Based Policy Analysis
+            </h3>
 
-    <div class="section-head">
+            <p>
+              Applying structured analytical lenses to understand
+              institutions, implementation responsibilities, evidence and
+              decision-making.
+            </p>
 
-      <div>
+          </div>
 
-        <div class="section-number">
-          07 / CREDENTIALS
+
+          <div class="lab-card">
+
+            <div class="lab-tag">
+              Data to Decisions
+            </div>
+
+            <h3>
+              Data-Rich, Decision-Poor
+            </h3>
+
+            <p>
+              Exploring how administrative data, spatial information and
+              frontline workflows can be connected to support better
+              municipal decisions.
+            </p>
+
+          </div>
+
         </div>
 
-        <h2 class="section-title">
-          Foundation &<br>
-          credentials.
-        </h2>
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         RESEARCH & METHODS
+    ========================= -->
+
+    <section id="methods" class="method">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div>
+            <div class="section-number">04 / RESEARCH & METHODS</div>
+
+            <h2 class="section-title">
+              How I work.
+            </h2>
+          </div>
+
+          <p class="section-intro">
+            A practical approach combining policy research, evidence,
+            programme design, implementation and communication.
+          </p>
+
+        </div>
+
+
+        <div class="method-flow">
+
+          <div class="method-step">
+            <span>01</span>
+            <h3>Frame</h3>
+            <p>Define the policy problem and identify the decision that matters.</p>
+          </div>
+
+          <div class="method-step">
+            <span>02</span>
+            <h3>Investigate</h3>
+            <p>Review evidence, datasets, literature and institutional context.</p>
+          </div>
+
+          <div class="method-step">
+            <span>03</span>
+            <h3>Map</h3>
+            <p>Connect stakeholders, systems, incentives and implementation constraints.</p>
+          </div>
+
+          <div class="method-step">
+            <span>04</span>
+            <h3>Design</h3>
+            <p>Develop policy options, Theory of Change, Logframes and implementation frameworks.</p>
+          </div>
+
+          <div class="method-step">
+            <span>05</span>
+            <h3>Measure</h3>
+            <p>Define outcomes, KPIs, monitoring approaches and feedback loops.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FIELD & IMPACT
+    ========================= -->
+
+    <section class="impact">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div>
+            <div class="section-number">05 / FIELD & IMPACT</div>
+
+            <h2 class="section-title">
+              Policy is ultimately<br />
+              about people.
+            </h2>
+          </div>
+
+          <p class="section-intro">
+            Programme delivery and community engagement have shaped how I
+            think about implementation, access and public value.
+          </p>
+
+        </div>
+
+
+        <div class="impact-grid">
+
+          <div>
+
+            <h3>
+              From grassroots delivery to policy research.
+            </h3>
+
+            <p class="impact-copy">
+              I co-founded and led a bilingual open-access learning
+              initiative working with government-school educators, rural
+              learners and parents in Tamil Nadu. The experience built a
+              practical understanding of feedback loops, coordination,
+              accessibility and programme delivery.
+            </p>
+
+          </div>
+
+
+          <div class="impact-stats">
+
+            <div class="impact-stat">
+              <strong>800+</strong>
+              <span>Open-access lessons</span>
+            </div>
+
+            <div class="impact-stat">
+              <strong>133K+</strong>
+              <span>Subscribers</span>
+            </div>
+
+            <div class="impact-stat">
+              <strong>30M+</strong>
+              <span>Views</span>
+            </div>
+
+            <div class="impact-stat">
+              <strong>2</strong>
+              <span>Languages — Tamil & English</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCE
+    ========================= -->
+
+    <section id="experience">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div>
+            <div class="section-number">06 / EXPERIENCE</div>
+
+            <h2 class="section-title">
+              Experience.
+            </h2>
+          </div>
+
+          <p class="section-intro">
+            A progression from engineering and technology to grassroots
+            programme delivery and public-policy research.
+          </p>
+
+        </div>
+
+
+        <div class="experience-list">
+
+          <div class="experience-item">
+
+            <div class="experience-date">
+              06/2021 — 03/2025
+            </div>
+
+            <div>
+
+              <h3>
+                Freelance Policy Researcher & Academic Content Writer
+              </h3>
+
+              <div class="experience-place">
+                Independent Policy & Academic Consulting · Chennai
+              </div>
+
+              <p>
+                Authored policy dossiers, legislative briefs, literature
+                reviews and institutional syntheses. Worked with survey
+                datasets and evidence from NFHS, Census and NITI Aayog
+                indices to develop Theory of Change frameworks, policy
+                analysis and evidence-based reports.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="experience-item">
+
+            <div class="experience-date">
+              07/2020 — 05/2025
+            </div>
+
+            <div>
+
+              <h3>
+                Co-Founder & Program Lead — Community Outreach
+              </h3>
+
+              <div class="experience-place">
+                Open-Access Grassroots Digital Learning Platform · Coimbatore
+              </div>
+
+              <p>
+                Led a bilingual open-access programme with government-school
+                educators and rural learners, coordinating teachers, parents,
+                learners, content production, engagement tracking and
+                feedback loops.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="experience-item">
+
+            <div class="experience-date">
+              05/2017 — 04/2018
+            </div>
+
+            <div>
+
+              <h3>
+                Associate Software Engineer
+              </h3>
+
+              <div class="experience-place">
+                Accenture Solutions Pvt. Ltd. · Chennai
+              </div>
+
+              <p>
+                Delivered SAP ABAP and SAP FICO workflows and automated
+                reporting for client migrations while coordinating with
+                client and cross-functional teams.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CREDENTIALS
+    ========================= -->
+
+    <section id="credentials" class="credentials">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div>
+            <div class="section-number">07 / CREDENTIALS</div>
+
+            <h2 class="section-title">
+              Education &<br />
+              credentials.
+            </h2>
+          </div>
+
+          <p class="section-intro">
+            Public administration, engineering, research and programme
+            monitoring capabilities.
+          </p>
+
+        </div>
+
+
+        <div class="credential-grid">
+
+          <div class="credential-card">
+
+            <small>Credential</small>
+
+            <h3>
+              UGC NET-JRF
+            </h3>
+
+            <p>
+              Public Administration — Junior Research Fellowship and
+              Assistant Professorship eligibility.
+            </p>
+
+          </div>
+
+
+          <div class="credential-card">
+
+            <small>Postgraduate</small>
+
+            <h3>
+              M.A. Public Administration
+            </h3>
+
+            <p>
+              University of Madras · 2020–2022
+            </p>
+
+          </div>
+
+
+          <div class="credential-card">
+
+            <small>Undergraduate</small>
+
+            <h3>
+              B.E. Electronics & Communication
+            </h3>
+
+            <p>
+              Kumaraguru College of Technology · 2013–2017
+            </p>
+
+          </div>
+
+
+          <div class="credential-card">
+
+            <small>Programme Monitoring</small>
+
+            <h3>
+              M&E + Theory of Change
+            </h3>
+
+            <p>
+              Advanced M&E and Theory of Change training — in progress.
+            </p>
+
+          </div>
+
+
+          <div class="credential-card">
+
+            <small>Data & Dashboards</small>
+
+            <h3>
+              Power BI · Tableau
+            </h3>
+
+            <p>
+              KPI development, dashboards and performance monitoring.
+            </p>
+
+          </div>
+
+
+          <div class="credential-card">
+
+            <small>Technology</small>
+
+            <h3>
+              SAP · HTML · AI Tools
+            </h3>
+
+            <p>
+              SAP ERP, civic-tech simulation, Canva and AI-enabled tools.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONNECT
+    ========================= -->
+
+    <section id="connect" class="connect">
+
+      <div class="container">
+
+        <div class="connect-box">
+
+          <div>
+
+            <div class="eyebrow" style="color:#9cc8c4;">
+              Let's connect
+            </div>
+
+            <h2>
+              Interested in policy,<br />
+              programmes or public value?
+            </h2>
+
+            <p>
+              I am interested in opportunities involving programme
+              management, public policy, governance, monitoring and
+              evidence-based implementation.
+            </p>
+
+          </div>
+
+
+          <div class="connect-links">
+
+            <a
+              href="mailto:wordsmithharini@gmail.com"
+            >
+              Email ↗
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/harini-v-s-8a5a9a424"
+              target="_blank"
+            >
+              LinkedIn ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-inner">
+
+        <span>
+          © 2026 Harini V S
+        </span>
+
+        <span>
+          Public Policy · Programme Management · Governance
+        </span>
 
       </div>
 
     </div>
 
-
-    <div class="credentials">
-
-
-      <div class="credential">
-
-        <small>
-          FELLOWSHIP / CREDENTIAL
-        </small>
-
-        <h3>
-          UGC NET-JRF — Public Administration
-        </h3>
-
-        <p>
-          Junior Research Fellowship and Assistant Professorship
-          eligibility nationwide.
-        </p>
-
-      </div>
+  </footer>
 
 
-      <div class="credential">
+  <!-- =========================
+       PROJECT MODAL
+  ========================= -->
 
-        <small>
-          POSTGRADUATE
-        </small>
+  <div id="projectModal" class="modal">
 
-        <h3>
-          M.A. Public Administration
-        </h3>
+    <div class="modal-content">
 
-        <p>
-          University of Madras · 2020–2022
-        </p>
+      <button
+        id="modalClose"
+        class="modal-close"
+        aria-label="Close"
+      >
+        ×
+      </button>
 
-      </div>
+      <div id="modalCategory" class="modal-category"></div>
 
+      <h2 id="modalTitle"></h2>
 
-      <div class="credential">
+      <div id="modalSubtitle" class="modal-subtitle"></div>
 
-        <small>
-          ENGINEERING
-        </small>
-
-        <h3>
-          B.E. Electronics & Communication
-        </h3>
-
-        <p>
-          Kumaraguru College of Technology · 2013–2017
-        </p>
-
-      </div>
-
-
-      <div class="credential">
-
-        <small>
-          ONGOING DEVELOPMENT
-        </small>
-
-        <h3>
-          Advanced M&E & Theory of Change
-        </h3>
-
-        <p>
-          Professional training in monitoring, evaluation and
-          programme design.
-        </p>
-
-      </div>
-
+      <p id="modalDescription"></p>
 
     </div>
 
   </div>
 
-</section>
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    /*
+      ============================================================
+      SELECTED POLICY WORKS
+
+      IMPORTANT:
+      The order below is intentional and is the exact order
+      displayed in "All Work".
+      ============================================================
+    */
+
+    const projects = [
+
+      {
+        title: "From Transit to Opportunity",
+        subtitle:
+          "Implementation Framework: Employment-Oriented Transit Development (E-TOD)",
+        category: "Programme & Development",
+        description:
+          "A policy brief on Employment-Oriented Transit Development, examining how transport planning can improve access to jobs and economic opportunity."
+      },
+
+      {
+        title: "Digital Public Service Failure Simulation",
+        subtitle:
+          "Crisis management · Digital governance · Service continuity",
+        category: "Digital Governance",
+        description:
+          "An interactive simulation examining how governments can maintain essential public services when digital systems fail."
+      },
+
+      {
+        title: "From Factory to Ecosystem",
+        subtitle:
+          "Industrial policy · MSMEs · Regional development",
+        category: "Programme & Development",
+        description:
+          "An industrial policy case study examining how Tier-2 industrial hubs can create stronger local supplier linkages and broader economic value."
+      },
+
+      {
+        title: "The Campus That Could Not Agree",
+        subtitle:
+          "Stakeholder analysis · Policy framing · Systems thinking",
+        category: "Policy Communication",
+        description:
+          "An interactive policy perspective exercise showing how the same evidence can produce different policy problems depending on stakeholder perspectives."
+      },
+
+      {
+        title: "Tamil Nadu’s Circular Economy Investment Policy",
+        subtitle:
+          "Environmental policy · Incentives · Implementation",
+        category: "Policy & Governance",
+        description:
+          "An analysis of whether investment incentives and implementation mechanisms align with Tamil Nadu’s circular-economy objectives."
+      },
+
+      {
+        title: "Skilling for the Future",
+        subtitle:
+          "Skills policy · Employability · Evidence synthesis",
+        category: "Policy & Governance",
+        description:
+          "A policy research study examining the gap between training outputs and meaningful employment outcomes for urban youth."
+      },
+
+      {
+        title: "National Geospatial Policy 2022",
+        subtitle:
+          "Technology policy · Governance · Geospatial data",
+        category: "Policy & Governance",
+        description:
+          "An analysis of India’s evolving geospatial policy framework and the gap between data availability and effective public-sector use."
+      },
+
+      {
+        title: "Project DRISHTI",
+        subtitle:
+          "AI governance · Accountability · Responsible technology",
+        category: "Digital Governance",
+        description:
+          "An examination of AI-assisted railway inspection and the question of where automated systems should alert, assist and defer to human judgment."
+      },
+
+      {
+        title: "Data-Rich, Decision-Poor",
+        subtitle:
+          "Urban governance · Data-to-decision · Municipal administration",
+        category: "Digital Governance",
+        description:
+          "An exploration of how cities can turn fragmented administrative and spatial data into information that supports better municipal decision-making."
+      },
+
+      {
+        title: "Andaman & Nicobar Constituency Policy Dossier",
+        subtitle:
+          "Connectivity · Development · Constituency analysis",
+        category: "Policy & Governance",
+        description:
+          "A constituency-level policy dossier examining passenger and freight connectivity, reverse logistics for municipal waste, and emergency maritime healthcare corridors."
+      }
+
+    ];
 
 
-<!-- =========================
-     CONNECT
-========================= -->
+    /*
+      ============================================================
+      RENDER PROJECTS
+      ============================================================
+    */
 
-<section class="connect" id="connect">
-
-  <div class="container">
-
-    <div class="section-number">
-      08 / CONNECT
-    </div>
-
-    <h2>
-      Let's talk<br>
-      policy.
-    </h2>
-
-    <p>
-      Interested in public policy, programme delivery, evidence-based governance,
-      civic technology or implementation? I would be glad to connect.
-    </p>
-
-    <a
-      class="btn"
-      href="https://www.linkedin.com/in/harini-v-s-8a5a9a424"
-      target="_blank"
-      rel="noopener">
-      Connect on LinkedIn ↗
-    </a>
-
-  </div>
-
-</section>
+    const projectGrid =
+      document.getElementById("projectGrid");
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+    function renderProjects(filter = "all") {
 
-<footer>
+      projectGrid.innerHTML = "";
 
-  <div class="container footer-inner">
-
-    <div class="footer-name">
-      HARINI V S
-    </div>
-
-    <div class="footer-note">
-      Programme Management · Data-Driven Governance · Public Policy
-    </div>
-
-  </div>
-
-</footer>
+      const filteredProjects =
+        filter === "all"
+          ? projects
+          : projects.filter(
+              project => project.category === filter
+            );
 
 
-<!-- =========================
-     PROJECT MODAL
-========================= -->
+      filteredProjects.forEach((project, index) => {
 
-<div class="modal" id="projectModal">
+        const originalIndex =
+          projects.indexOf(project) + 1;
 
-  <div class="modal-box">
+        const card =
+          document.createElement("article");
 
-    <button
-      class="close"
-      onclick="closeProject()"
-      aria-label="Close">
-      ×
-    </button>
+        card.className = "project-card";
 
-    <div id="modalContent"></div>
+        card.innerHTML = `
 
-  </div>
+          <div>
 
-</div>
+            <div class="project-top">
+
+              <div class="project-index">
+                ${String(originalIndex).padStart(2, "0")}
+              </div>
+
+              <div class="project-category">
+                ${project.category}
+              </div>
+
+            </div>
 
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
+            <h3>
+              ${project.title}
+            </h3>
 
-<script>
 
-/* PROJECT FILTER */
+            <div class="subtitle">
+              ${project.subtitle}
+            </div>
 
-const filters = document.querySelectorAll(".filter");
-const cards = document.querySelectorAll(".project-card");
 
-filters.forEach(filter => {
+            <p>
+              ${project.description}
+            </p>
 
-  filter.addEventListener("click", () => {
+          </div>
 
-    filters.forEach(f => {
-      f.classList.remove("active");
+
+          <div class="project-more">
+            View project details →
+          </div>
+
+        `;
+
+
+        card.addEventListener("click", () => {
+
+          document.getElementById("modalCategory")
+            .textContent = project.category;
+
+          document.getElementById("modalTitle")
+            .textContent = project.title;
+
+          document.getElementById("modalSubtitle")
+            .textContent = project.subtitle;
+
+          document.getElementById("modalDescription")
+            .textContent = project.description;
+
+          document
+            .getElementById("projectModal")
+            .classList.add("open");
+
+        });
+
+
+        projectGrid.appendChild(card);
+
+      });
+
+    }
+
+
+    /*
+      ============================================================
+      FILTER BUTTONS
+      ============================================================
+    */
+
+    const filterButtons =
+      document.querySelectorAll(".filter");
+
+
+    filterButtons.forEach(button => {
+
+      button.addEventListener("click", () => {
+
+        filterButtons.forEach(btn =>
+          btn.classList.remove("active")
+        );
+
+        button.classList.add("active");
+
+        renderProjects(
+          button.dataset.filter
+        );
+
+      });
+
     });
 
-    filter.classList.add("active");
 
-    const selected = filter.dataset.filter;
+    /*
+      ============================================================
+      MODAL
+      ============================================================
+    */
 
-    cards.forEach(card => {
+    const modal =
+      document.getElementById("projectModal");
 
-      if(
-        selected === "all" ||
-        card.dataset.category === selected
-      ){
+    const modalClose =
+      document.getElementById("modalClose");
 
-        card.classList.remove("hidden");
 
-      }else{
+    modalClose.addEventListener("click", () => {
 
-        card.classList.add("hidden");
+      modal.classList.remove("open");
+
+    });
+
+
+    modal.addEventListener("click", event => {
+
+      if (event.target === modal) {
+
+        modal.classList.remove("open");
 
       }
 
     });
 
-  });
 
-});
+    document.addEventListener("keydown", event => {
 
+      if (event.key === "Escape") {
 
-/* PROJECT INFORMATION */
+        modal.classList.remove("open");
 
-const projects = {
+      }
 
-  1:{
-    title:"Government Engine Mapping",
-    type:"Institutional Analysis",
-    description:
-      "A framework-based analysis of a Union Cabinet decision concerning the Integrated Transport & Logistics Authority. The work examines how a government decision moves through different institutional lenses.",
-    skills:
-      "Policy analysis · Institutional analysis · Legislative reasoning · Government decision-making"
-  },
-
-  2:{
-    title:"Project DRISHTI",
-    type:"AI Governance",
-    description:
-      "An exploration of AI-assisted railway inspection and the central question: should AI decide, or should it primarily alert? The analysis considers speed, scale, human override, accountability and workforce preparation.",
-    skills:
-      "AI governance · Accountability · Technology policy · Risk analysis"
-  },
-
-  3:{
-    title:"National Geospatial Policy 2022",
-    type:"Geospatial Policy",
-    description:
-      "An analysis of India's transition toward greater openness in geospatial data. The project asks a broader question: does making data available automatically translate into better public decision-making and citizen outcomes?",
-    skills:
-      "Geospatial policy · Technology governance · Policy analysis"
-  },
-
-  4:{
-    title:"India's Homegrown AI",
-    type:"Strategic Technology",
-    description:
-      "A comparative policy note examining India's homegrown AI ecosystem alongside global AI labs, with attention to strategic technology, competition, scale, public value and trust.",
-    skills:
-      "Comparative analysis · Strategic technology · Policy writing"
-  },
-
-  5:{
-    title:"Employment-Oriented Transit Development",
-    type:"Urban Mobility",
-    description:
-      "A policy design exercise that reframes transport success around the opportunities people can reach rather than infrastructure delivered alone. The work uses Theory of Change, Logframe and M&E thinking.",
-    skills:
-      "Urban policy · Policy design · M&E · Equity analysis"
-  },
-
-  6:{
-    title:"Tamil Nadu Circular Economy Investment Policy",
-    type:"Environmental Policy",
-    description:
-      "An implementation-focused examination of whether investment incentives and policy mechanisms are aligned with circular-economy objectives and whether policy intent translates into outcomes.",
-    skills:
-      "Environmental policy · Incentive analysis · Implementation gaps"
-  },
-
-  7:{
-    title:"The Campus That Could Not Agree",
-    type:"Stakeholder Analysis",
-    description:
-      "An interactive perspective-shift exercise demonstrating how different stakeholders can interpret the same evidence as different policy problems. Includes stakeholder mapping and evidence classification.",
-    skills:
-      "Stakeholder analysis · Policy framing · Systems thinking"
-  },
-
-  8:{
-    title:"Crisis Command & Citizen Continuity Terminal",
-    type:"Digital Governance",
-    description:
-      "A digital public-service failure simulation designed around administrative resilience. It explores how frontline systems can maintain citizen access when digital infrastructure becomes unavailable.",
-    skills:
-      "Digital governance · Crisis management · Civic-tech · Service continuity"
-  },
-
-  9:{
-    title:"From Factory to Ecosystem",
-    type:"Industrial Policy",
-    description:
-      "A Tier-2 city industrial-policy case study examining how manufacturing can generate wider local economic value through MSME supply linkages, skilled employment and ecosystem development.",
-    skills:
-      "Industrial policy · MSMEs · Regional development · Value chains"
-  },
-
-  10:{
-    title:"Data-Rich, Decision-Poor",
-    type:"Urban Data",
-    description:
-      "An exploration of the gap between data collection and decision usability in urban governance. The project connects operational data, property records and maps with frontline administrative action.",
-    skills:
-      "Urban governance · GIS · Data-to-decision · Municipal administration"
-  },
-
-  11:{
-    title:"Skilling for the Future",
-    type:"Skills & Employment",
-    description:
-      "A policy research project examining why training outputs do not necessarily translate into employment outcomes. It considers placement, retention, employer demand, curricula and institutional incentives.",
-    skills:
-      "Literature review · Evidence synthesis · Labour-market analysis · Evaluation"
-  },
-
-  12:{
-    title:"Andaman & Nicobar Constituency Policy Dossier",
-    type:"Constituency Policy",
-    description:
-      "A constituency-level policy dossier examining connectivity challenges across passenger and freight shipping, reverse logistics for municipal waste and emergency maritime healthcare corridors.",
-    skills:
-      "Constituency analysis · Theory of Change · Public services · Policy design",
-    link:"https://heyzine.com/flip-book/9bf2ae2e77.html"
-  }
-
-};
+    });
 
 
-/* OPEN PROJECT */
+    /*
+      ============================================================
+      INITIAL LOAD
+      ============================================================
+    */
 
-function openProject(id){
+    renderProjects("all");
 
-  const project = projects[id];
-
-  let link = "";
-
-  if(project.link){
-
-    link = `
-      <a
-        class="btn btn-primary"
-        href="${project.link}"
-        target="_blank"
-        rel="noopener">
-        Open project ↗
-      </a>
-    `;
-
-  }
-
-  document.getElementById("modalContent").innerHTML = `
-
-    <div class="section-number">
-      ${project.type.toUpperCase()}
-    </div>
-
-    <h2>
-      ${project.title}
-    </h2>
-
-    <p>
-      ${project.description}
-    </p>
-
-    <div class="modal-meta">
-
-      <strong>
-        Policy capabilities
-      </strong>
-
-      <br><br>
-
-      ${project.skills}
-
-    </div>
-
-    ${link}
-
-  `;
-
-  document
-    .getElementById("projectModal")
-    .classList
-    .add("open");
-
-}
-
-
-/* CLOSE PROJECT */
-
-function closeProject(){
-
-  document
-    .getElementById("projectModal")
-    .classList
-    .remove("open");
-
-}
-
-
-/* CLOSE WHEN CLICKING OUTSIDE */
-
-document
-  .getElementById("projectModal")
-  .addEventListener("click", function(e){
-
-    if(e.target === this){
-      closeProject();
-    }
-
-  });
-
-
-/* CLOSE WITH ESCAPE */
-
-document.addEventListener("keydown", function(e){
-
-  if(e.key === "Escape"){
-    closeProject();
-  }
-
-});
-
-</script>
+  </script>
 
 </body>
 </html>
