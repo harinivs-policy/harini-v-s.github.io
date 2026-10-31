@@ -1,1 +1,518 @@
-Project page coming soon
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Southern Demographic Resilience Pilot | Harini V S</title>
+<meta name="description" content="A proposed five-year Southern Demographic Resilience Pilot across five states and ten districts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --paper:#f7f5ef;
+  --ink:#1d3038;
+  --muted:#687570;
+  --green:#647d70;
+  --green-light:#e8eee8;
+  --rust:#ad6c50;
+  --rust-light:#f1e6de;
+  --line:#deded5;
+  --white:#fffefa;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'DM Sans',sans-serif;
+  line-height:1.7;
+}
+a {color:inherit}
+.container {width:min(1080px,90%);margin:auto}
+.topbar {
+  padding:22px 0;
+  border-bottom:1px solid var(--line);
+  font-size:11px;
+  letter-spacing:2px;
+  color:var(--muted);
+  text-transform:uppercase;
+}
+.topbar .container {display:flex;justify-content:space-between;gap:16px}
+.hero {padding:85px 0 65px}
+.eyebrow {
+  color:var(--green);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+h1,h2,h3 {
+  font-family:'Playfair Display',serif;
+  font-weight:600;
+  line-height:1.15;
+}
+h1 {
+  font-size:clamp(42px,7vw,76px);
+  max-width:850px;
+  letter-spacing:-1.8px;
+  margin:22px 0;
+}
+.hero-subtitle {
+  color:var(--green);
+  font-family:'Playfair Display',serif;
+  font-size:clamp(21px,3vw,29px);
+  max-width:760px;
+  line-height:1.4;
+}
+.hero-copy {max-width:690px;color:var(--muted);font-size:16px}
+.hero-meta {
+  display:flex;flex-wrap:wrap;gap:12px;
+  margin-top:32px;
+}
+.pill {
+  border:1px solid #cbd2c9;
+  padding:8px 14px;
+  border-radius:30px;
+  font-size:12px;
+  color:var(--green);
+}
+.hero-art {
+  margin-top:48px;
+  min-height:210px;
+  border-radius:5px;
+  overflow:hidden;
+  position:relative;
+  background:
+    radial-gradient(ellipse at 78% 25%,#c4d0bd 0%,transparent 33%),
+    radial-gradient(ellipse at 22% 80%,#d8b9a2 0%,transparent 35%),
+    linear-gradient(120deg,#e9e9dc,#dce5dc);
+  display:flex;
+  align-items:flex-end;
+  padding:25px 30px;
+}
+.hero-art:after {
+  content:"SOUTHERN INDIA";
+  position:absolute;
+  right:25px;top:22px;
+  color:#526c60;
+  font-size:11px;
+  letter-spacing:3px;
+}
+.hero-art p {
+  max-width:420px;
+  margin:0;
+  color:#30483f;
+  font-family:'Playfair Display',serif;
+  font-size:clamp(23px,3vw,34px);
+  position:relative;z-index:1;
+}
+section {padding:65px 0;border-top:1px solid var(--line)}
+.section-number {
+  font-size:11px;
+  color:var(--rust);
+  letter-spacing:2px;
+  font-weight:700;
+}
+h2 {font-size:clamp(30px,4vw,43px);margin:12px 0 20px}
+h3 {font-size:23px;margin:0 0 10px}
+.lead {font-size:18px;max-width:760px;color:#4f5e59}
+.small {font-size:12px;color:var(--muted)}
+.stats {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-top:32px;
+}
+.stat {
+  background:var(--white);
+  padding:25px;
+  border-top:3px solid var(--green);
+}
+.stat:nth-child(2) {border-color:var(--rust)}
+.stat:nth-child(3) {border-color:#9b9a72}
+.stat strong {
+  display:block;
+  font-family:'Playfair Display',serif;
+  font-size:39px;
+  line-height:1.2;
+}
+.stat p {font-size:13px;color:var(--muted);margin:10px 0 0}
+.two-col {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+}
+.problem-list {padding-left:20px;color:#52615b}
+.problem-list li {margin:12px 0}
+.instrument {
+  display:grid;
+  grid-template-columns:65px 1fr;
+  gap:18px;
+  padding:25px 0;
+  border-bottom:1px solid var(--line);
+}
+.instrument:last-child {border-bottom:0}
+.instrument-no {
+  font-family:'Playfair Display',serif;
+  font-size:32px;
+  color:var(--rust);
+}
+.instrument p {margin:0;color:var(--muted);font-size:14px}
+.states {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
+  margin-top:30px;
+}
+.state {
+  background:var(--green-light);
+  padding:20px 14px;
+  text-align:center;
+  border-radius:3px;
+}
+.state strong {display:block;font-size:14px}
+.state span {font-size:12px;color:var(--muted)}
+.timeline {
+  margin-top:30px;
+  border-left:2px solid #b5c4b7;
+  padding-left:28px;
+}
+.milestone {
+  position:relative;
+  padding:0 0 30px;
+}
+.milestone:before {
+  content:"";
+  position:absolute;
+  left:-35px;top:8px;
+  width:12px;height:12px;
+  background:var(--rust);
+  border:3px solid var(--paper);
+  border-radius:50%;
+}
+.milestone .date {
+  color:var(--rust);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+.milestone p {margin:5px 0;color:var(--muted);font-size:14px}
+.risk-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-top:25px;
+}
+.risk {
+  padding:22px;
+  background:var(--rust-light);
+}
+.risk p {font-size:14px;color:#65564d;margin-bottom:0}
+.decision {
+  background:var(--ink);
+  color:#f7f5ef;
+  padding:45px;
+  border-radius:4px;
+}
+.decision h2 {color:#f7f5ef}
+.decision p {color:#d6ded8;max-width:750px}
+.document {
+  background:#e9eee8;
+  padding:35px;
+  border-radius:4px;
+}
+.document-actions {
+  display:flex;flex-wrap:wrap;gap:12px;margin-top:22px
+}
+.button {
+  display:inline-block;
+  text-decoration:none;
+  padding:12px 19px;
+  background:var(--ink);
+  color:white;
+  font-size:13px;
+  border-radius:2px;
+}
+.button.secondary {
+  background:transparent;
+  color:var(--ink);
+  border:1px solid #9aa79d;
+}
+.pdf-frame {
+  width:100%;
+  height:760px;
+  border:1px solid var(--line);
+  background:white;
+  margin-top:28px;
+}
+footer {
+  padding:30px 0;
+  color:var(--muted);
+  font-size:12px;
+  border-top:1px solid var(--line);
+}
+.source-list {font-size:13px;color:var(--muted);padding-left:20px}
+@media(max-width:700px) {
+  .hero {padding:55px 0 40px}
+  .stats {grid-template-columns:1fr}
+  .two-col,.risk-grid {grid-template-columns:1fr}
+  .states {grid-template-columns:repeat(2,1fr)}
+  .instrument {grid-template-columns:42px 1fr}
+  .decision,.document {padding:25px}
+  .pdf-frame {height:570px}
+  .topbar .container {flex-direction:column}
+}
+</style>
+</head>
+
+<body>
+<div class="topbar">
+  <div class="container">
+    <span>Harini V S · Public Policy Portfolio</span>
+    <span>Policy Research / 2026</span>
+  </div>
+</div>
+
+<main class="container">
+
+<header class="hero">
+  <div class="eyebrow">Policy Note · Regional Development</div>
+  <h1>Southern Demographic Resilience Pilot</h1>
+  <div class="hero-subtitle">Can Southern India turn demographic change into economic resilience?</div>
+  <p class="hero-copy">
+    A proposed five-year pilot across five southern states, designed to address
+    the intersection of population ageing, local workforce constraints and
+    growing labour demand.
+  </p>
+  <div class="hero-meta">
+    <span class="pill">5 States</span>
+    <span class="pill">10 Proposed Districts</span>
+    <span class="pill">5-Year Proposal</span>
+    <span class="pill">Year 1: Preparation</span>
+  </div>
+  <div class="hero-art">
+    <p>Demographic change is not only a challenge to manage. It is an economic transition to prepare for.</p>
+  </div>
+</header>
+
+<section>
+  <div class="section-number">01 / THE CONTEXT</div>
+  <h2>A changing demographic landscape</h2>
+  <p class="lead">
+    Southern states are ageing faster than India as a whole. At the same time,
+    local workforce growth is slowing while demand for labour continues to rise.
+  </p>
+  <div class="stats">
+    <div class="stat">
+      <strong>20%+</strong>
+      <p>Projected share of people aged 60+ in Kerala and Tamil Nadu by 2036.</p>
+      <span class="small">India Ageing Report 2023</span>
+    </div>
+    <div class="stat">
+      <strong>15%</strong>
+      <p>Projected national share of people aged 60+ by 2036.</p>
+      <span class="small">India Ageing Report 2023</span>
+    </div>
+    <div class="stat">
+      <strong>29.9%</strong>
+      <p>Kerala youth unemployment rate, compared with 10.2% nationally.</p>
+      <span class="small">PLFS 2023–24</span>
+    </div>
+  </div>
+  <p class="small">Sources: India Ageing Report 2023; PLFS 2023–24. Figures are reproduced from the submitted policy note.</p>
+</section>
+
+<section>
+  <div class="section-number">02 / THE POLICY PROBLEM</div>
+  <h2>Three pressures. One connected challenge.</h2>
+  <div class="two-col">
+    <div>
+      <h3>The triple pressure</h3>
+      <ul class="problem-list">
+        <li>A growing share of the population entering older age groups.</li>
+        <li>Slow growth of the native workforce.</li>
+        <li>Rising labour demand across the regional economy.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>The emerging gap</h3>
+      <p class="lead" style="font-size:16px">
+        Local youth may remain unemployed even as employers depend on migrant
+        workers. Migrants can arrive without secure contracts, adequate housing
+        or portable welfare access.
+      </p>
+      <p class="small">
+        The resulting pressures include urban congestion, informal exploitation
+        and wage anxiety among local workers.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-number">03 / THE PROPOSED RESPONSE</div>
+  <h2>Four instruments. One regional approach.</h2>
+
+  <div class="instrument">
+    <div class="instrument-no">01</div>
+    <div>
+      <h3>Increase local labour productivity</h3>
+      <p>Place women at the centre through industry-linked apprenticeships, safe transport, return-to-work schemes and childcare.</p>
+    </div>
+  </div>
+
+  <div class="instrument">
+    <div class="instrument-no">02</div>
+    <div>
+      <h3>Establish one fair labour standard</h3>
+      <p>Led by the Ministry of Labour and Employment, with common minimum wages, skill recognition, contracts and safety rules for local and migrant workers. A portable worker account would build on e-Shram and One Nation One Ration Card.</p>
+    </div>
+  </div>
+
+  <div class="instrument">
+    <div class="instrument-no">03</div>
+    <div>
+      <h3>Make dignified ageing an economic opportunity</h3>
+      <p>Develop trained and certified carers with social protection.</p>
+    </div>
+  </div>
+
+  <div class="instrument">
+    <div class="instrument-no">04</div>
+    <div>
+      <h3>Create a Destination District Workforce Fund</h3>
+      <p>A proposed Union–state–employer funding mechanism to strengthen services in districts with high migrant loads.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-number">04 / THE PILOT FRAMEWORK</div>
+  <h2>Five states. Ten districts.</h2>
+  <p class="lead">The proposed pilot covers two districts in each of five southern states.</p>
+  <div class="states">
+    <div class="state"><strong>Andhra Pradesh</strong><span>2 districts</span></div>
+    <div class="state"><strong>Telangana</strong><span>2 districts</span></div>
+    <div class="state"><strong>Tamil Nadu</strong><span>2 districts</span></div>
+    <div class="state"><strong>Kerala</strong><span>2 districts</span></div>
+    <div class="state"><strong>Karnataka</strong><span>2 districts</span></div>
+  </div>
+  <p class="small">Districts are proposed to be selected jointly using migrant data, labour demand, urban congestion, wage data, skill demand and availability of basic services.</p>
+</section>
+
+<section>
+  <div class="section-number">05 / YEAR 1</div>
+  <h2>From approval to a costed implementation plan</h2>
+  <p class="lead">Year 1 is a preparation phase covering baseline surveys, district selection, costing and target-setting. It requires no new funding.</p>
+  <div class="timeline">
+    <div class="milestone">
+      <div class="date">By Month 3</div>
+      <h3>Consolidate baseline evidence</h3>
+      <p>The Ministry consolidates existing migrant survey data for Tamil Nadu, Karnataka and Kerala, and commissions surveys for Telangana and Andhra Pradesh.</p>
+    </div>
+    <div class="milestone">
+      <div class="date">By Month 6</div>
+      <h3>Select districts and establish costs</h3>
+      <p>NITI Aayog, the Ministry and the five state governments jointly select ten districts, cost the pilot and determine the proposed Union–state–employer funding split. Existing secondary data would be used for Telangana and Andhra Pradesh until surveys report.</p>
+    </div>
+    <div class="milestone">
+      <div class="date">By October 2027 · End of Year 1</div>
+      <h3>Approve the costed Years 2–5 plan</h3>
+      <p>NITI Aayog and the Ministry set targets and submit the costed plan for approval by the Vice-Chairperson.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-number">06 / IMPLEMENTATION CONSIDERATIONS</div>
+  <h2>The trade-offs cannot be ignored</h2>
+  <div class="risk-grid">
+    <div class="risk">
+      <h3>Short-term costs</h3>
+      <p>Formalisation, housing and welfare services raise costs for states and employers.</p>
+    </div>
+    <div class="risk">
+      <h3>Local perceptions</h3>
+      <p>Residents may see the pilot as favouring migrants, although local skilling and protected care jobs directly benefit residents.</p>
+    </div>
+    <div class="risk">
+      <h3>Employer compliance</h3>
+      <p>Some employers may evade labour rules, particularly in informal settings.</p>
+    </div>
+    <div class="risk">
+      <h3>Time to impact</h3>
+      <p>Enforcement and institutional change may take years to reach informal employers.</p>
+    </div>
+  </div>
+  <p class="small" style="margin-top:20px">The SIIMS 2026 survey cited in the note is indicative, not representative: it surveyed 1,824 migrant workers in Tamil Nadu, Kerala and Karnataka. The note reports that 19.4% could easily access welfare after migrating, while 45.3% faced difficulty.</p>
+</section>
+
+<section>
+  <div class="decision">
+    <div class="section-number" style="color:#c5a18b">07 / THE DECISION SOUGHT</div>
+    <h2>Approve Year 1 of the proposed pilot.</h2>
+    <p>
+      The recommendation is for NITI Aayog to approve a 12-month preparation
+      phase beginning upon approval, with the Ministry of Labour and Employment
+      leading the process.
+    </p>
+    <p>
+      The immediate decision is to establish the evidence, select the districts,
+      determine costs and set targets before seeking approval for Years 2–5.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="section-number">08 / ORIGINAL DOCUMENT</div>
+  <h2>Read the full Note for Approval</h2>
+  <p class="lead">
+    The complete original submission, addressed to the Vice-Chairperson of
+    NITI Aayog, is reproduced below without alteration.
+  </p>
+
+  <div class="document">
+    <div class="eyebrow">Original submission · 13 October 2026</div>
+    <h3>NOTE FOR APPROVAL</h3>
+    <p class="small">Submitted by Harini V S</p>
+    <div class="document-actions">
+      <a class="button" href="NOTE%20FOR%20APPROVAL_HARINI%20V%20S.pdf" target="_blank" rel="noopener">Open full note ↗</a>
+      <a class="button secondary" href="NOTE%20FOR%20APPROVAL_HARINI%20V%20S.pdf" download>Download PDF ↓</a>
+    </div>
+  </div>
+
+  <iframe
+    class="pdf-frame"
+    src="NOTE%20FOR%20APPROVAL_HARINI%20V%20S.pdf"
+    title="Full Note for Approval PDF">
+  </iframe>
+
+  <p class="small">If the document does not display in your browser, use the Open full note link above.</p>
+</section>
+
+<section>
+  <div class="section-number">ANNEXURE / SOURCES</div>
+  <h2>References cited in the note</h2>
+  <ol class="source-list">
+    <li>UNFPA India and International Institute for Population Sciences, India Ageing Report 2023.</li>
+    <li>Ministry of Statistics and Programme Implementation, PLFS 2023–24.</li>
+    <li>SIIMS 2026 migrant survey.</li>
+  </ol>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div>Harini V S · Programme Management · Data-Driven Governance · Public Policy</div>
+    <div style="margin-top:7px">Policy portfolio · Southern Demographic Resilience Pilot</div>
+  </div>
+</footer>
+</body>
+</html>
+
