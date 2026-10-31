@@ -1,1 +1,362 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project DRISHTI | Harini V S</title>
+<meta name="description" content="A policy debate on AI-assisted freight wagon inspection, human oversight and accountability in Indian Railways.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --paper: #f7f5ef;
+  --ink: #172b3a;
+  --muted: #66736f;
+  --teal: #477b75;
+  --coral: #bd765d;
+  --line: #deded4;
+  --white: #fffefa;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+}
+
+a { color: inherit; }
+
+nav {
+  max-width: 1120px;
+  margin: auto;
+  padding: 25px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.nav-link {
+  color: var(--teal);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 75px 6% 90px;
+}
+
+.eyebrow {
+  color: var(--coral);
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: clamp(42px, 7vw, 76px);
+  max-width: 850px;
+  margin: 20px 0;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 19px;
+  max-width: 700px;
+}
+
+.question {
+  margin: 55px 0;
+  padding: 35px;
+  background: var(--ink);
+  color: var(--white);
+  border-left: 5px solid var(--coral);
+}
+
+.question small {
+  color: #c6d5cf;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.question h2 {
+  font-size: clamp(28px, 4vw, 43px);
+  margin: 12px 0 0;
+}
+
+section { margin-top: 65px; }
+
+h2.section-title {
+  font-size: 34px;
+  margin-bottom: 18px;
+}
+
+.intro {
+  color: var(--muted);
+  max-width: 760px;
+}
+
+.debate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.debate-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 25px;
+}
+
+.number {
+  color: var(--coral);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.debate-card h3 {
+  font-size: 17px;
+  line-height: 1.45;
+  margin: 12px 0;
+}
+
+.debate-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.note {
+  background: #e9eee8;
+  padding: 25px 28px;
+  border-left: 3px solid var(--teal);
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.pdf-section {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 28px;
+  margin-top: 25px;
+}
+
+.pdf-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 18px 0 25px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: var(--ink);
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid var(--teal);
+  color: var(--teal);
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  height: 700px;
+  border: 1px solid var(--line);
+  background: white;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 25px 6%;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  main { padding-top: 48px; }
+  .debate-grid { grid-template-columns: 1fr; }
+  .question { padding: 25px; }
+  iframe { height: 500px; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="brand">HARINI V S</div>
+  <a class="nav-link" href="../../">← Back to Portfolio</a>
+</nav>
+
+<main>
+
+  <div class="eyebrow">The Policy Debate · AI & Governance</div>
+
+  <h1>Project DRISHTI</h1>
+
+  <p class="subtitle">
+    Examining the changing role of human judgement in AI-assisted
+    freight wagon inspection across Indian Railways.
+  </p>
+
+  <div class="question">
+    <small>The central question</small>
+    <h2>Should AI decide, or only alert?</h2>
+  </div>
+
+  <section>
+    <div class="eyebrow">01 / The context</div>
+    <h2 class="section-title">When inspection becomes automated</h2>
+
+    <p class="intro">
+      Indian Railways' Project DRISHTI uses AI-enabled cameras to
+      inspect moving freight wagons for issues such as open doors,
+      broken locks and tampered seals. The technology offers the
+      possibility of faster and wider inspection coverage.
+    </p>
+
+    <p class="intro">
+      But expanding automated screening raises a governance question:
+      when AI screens every wagon, what should remain the responsibility
+      of human inspectors?
+    </p>
+  </section>
+
+  <section>
+    <div class="eyebrow">02 / The debate</div>
+    <h2 class="section-title">Three questions worth examining</h2>
+
+    <div class="debate-grid">
+
+      <article class="debate-card">
+        <div class="number">QUESTION 01</div>
+        <h3>AI coverage versus human sampling</h3>
+        <p>
+          Is AI screening with human spot-checks preferable to
+          human inspection of a smaller sample?
+        </p>
+      </article>
+
+      <article class="debate-card">
+        <div class="number">QUESTION 02</div>
+        <h3>Can humans challenge an AI flag?</h3>
+        <p>
+          Can a junior inspector override an AI-generated alert?
+          Who is accountable when an override leads to a wrong decision?
+        </p>
+      </article>
+
+      <article class="debate-card">
+        <div class="number">QUESTION 03</div>
+        <h3>What should people be trained for?</h3>
+        <p>
+          As AI enters railways, roads and courts, how should
+          professional training evolve?
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">03 / Governance perspective</div>
+    <h2 class="section-title">Technology needs accountability</h2>
+
+    <p class="intro">
+      The debate is not simply about whether AI can detect an anomaly.
+      It is about how automated alerts, human judgement and institutional
+      responsibility should work together in safety-sensitive systems.
+    </p>
+
+    <div class="note">
+      <strong>Important distinction:</strong>
+      The governance approach explored in this project is a proposed
+      analytical perspective for discussion. It should not be interpreted
+      as an official policy or operating procedure of Indian Railways
+      or Project DRISHTI.
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">04 / Project document</div>
+    <h2 class="section-title">Explore the policy debate</h2>
+
+    <p class="intro">
+      Read the accompanying carousel for the proposed approach,
+      governance considerations and questions for discussion.
+    </p>
+
+    <div class="pdf-section">
+
+      <strong>Project DRISHTI — Policy Debate Carousel</strong>
+
+      <div class="pdf-actions">
+        <a class="btn"
+           href="project-drishti-carousel.pdf"
+           target="_blank">
+          Open PDF ↗
+        </a>
+
+        <a class="btn secondary"
+           href="project-drishti-carousel.pdf"
+           download>
+          Download PDF ↓
+        </a>
+      </div>
+
+      <iframe
+        src="project-drishti-carousel.pdf"
+        title="Project DRISHTI policy debate carousel">
+      </iframe>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">05 / Join the conversation</div>
+    <h2 class="section-title">Where should human judgement remain?</h2>
+
+    <p class="intro">
+      A discussion for professionals working across railway operations,
+      artificial intelligence, public policy and safety governance.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  HARINI V S · PROGRAMME MANAGEMENT · DATA-DRIVEN GOVERNANCE · PUBLIC POLICY
+</footer>
+
+</body>
+</html>
+
