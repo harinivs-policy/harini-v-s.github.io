@@ -1,1 +1,390 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>National Geospatial Policy 2022 | Harini V S</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --paper: #f7f5ef;
+      --ink: #202b36;
+      --muted: #68737a;
+      --teal: #477b78;
+      --coral: #c47b62;
+      --line: #dedbd2;
+      --white: #fffefa;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      max-width: 1060px;
+      margin: auto;
+      padding: 34px 6% 70px;
+    }
+
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .back {
+      text-decoration: none;
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    .hero {
+      padding: 85px 0 55px;
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      color: var(--coral);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      letter-spacing: -1.8px;
+      margin: 18px 0;
+    }
+
+    .hero-question {
+      color: var(--teal);
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(23px, 3.5vw, 34px);
+      line-height: 1.35;
+      margin: 25px 0;
+    }
+
+    .intro {
+      max-width: 690px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .section {
+      padding: 48px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-label {
+      color: var(--coral);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: clamp(29px, 4vw, 42px);
+      margin: 12px 0 18px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 720px;
+    }
+
+    .video-frame {
+      margin-top: 28px;
+      background: #18232c;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 16px 38px rgba(32,43,54,.10);
+    }
+
+    video {
+      display: block;
+      width: 100%;
+      max-height: 650px;
+      background: #18232c;
+    }
+
+    .video-note {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 12px;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .timeline-item {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 25px;
+      border-radius: 4px;
+    }
+
+    .year {
+      color: var(--teal);
+      font-size: 30px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+
+    .timeline-item h3 {
+      font-size: 21px;
+      margin: 8px 0;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .argument {
+      background: #e9efeb;
+      border-left: 4px solid var(--teal);
+      padding: 28px 30px;
+      margin-top: 28px;
+    }
+
+    .argument p {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(22px, 3vw, 30px);
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .three-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .point {
+      padding: 22px;
+      border-top: 2px solid var(--coral);
+      background: var(--white);
+    }
+
+    .point h3 {
+      font-size: 21px;
+      margin: 0 0 10px;
+    }
+
+    .point p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .closing {
+      padding: 42px 0;
+      text-align: center;
+      border-top: 1px solid var(--line);
+    }
+
+    .closing h2 {
+      max-width: 700px;
+      margin: 0 auto 15px;
+    }
+
+    .closing p {
+      color: var(--muted);
+      max-width: 620px;
+      margin: auto;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 700px) {
+      .page { padding: 22px 6% 48px; }
+      .hero { padding: 58px 0 40px; }
+      .timeline, .three-points { grid-template-columns: 1fr; }
+      .footer { flex-direction: column; }
+      .topline { align-items: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <div class="topline">
+      <span>Policy Anatomy · Research & Analysis</span>
+      <a class="back" href="../../">← Back to Portfolio</a>
+    </div>
+
+    <header class="hero">
+      <div class="eyebrow">#DecodeThePolicy</div>
+
+      <h1>National Geospatial Policy 2022</h1>
+
+      <div class="hero-question">
+        India opened up its geospatial data. Did it make that data useful to citizens?
+      </div>
+
+      <p class="intro">
+        From restricted access to a more open geospatial ecosystem, India's
+        policy landscape has changed significantly. But making data available
+        is only one part of the journey. The next challenge is turning access
+        into usability, integration and meaningful public outcomes.
+      </p>
+    </header>
+
+    <section class="section">
+      <div class="section-label">01 / Project presentation</div>
+      <h2>Watch the policy breakdown</h2>
+      <p class="section-intro">
+        A visual exploration of India's geospatial policy journey through
+        a Policy Anatomy framework.
+      </p>
+
+      <div class="video-frame">
+        <video controls playsinline preload="metadata">
+          <source src="geospatial-policy-video.mp4" type="video/mp4">
+          Your browser does not support embedded video.
+          <a href="geospatial-policy-video.mp4">Open the video</a>.
+        </video>
+      </div>
+
+      <p class="video-note">
+        If the video does not play, try opening it directly in your browser.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="section-label">02 / The policy journey</div>
+      <h2>From restriction to openness</h2>
+      <p class="section-intro">
+        India's geospatial policy journey can be understood through two
+        important milestones.
+      </p>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="year">2021</div>
+          <h3>Opening the ecosystem</h3>
+          <p>
+            The liberalised geospatial guidelines and Drone Rules marked
+            a shift towards easing restrictions and enabling wider access
+            and participation.
+          </p>
+        </article>
+
+        <article class="timeline-item">
+          <div class="year">2022</div>
+          <h3>A common policy framework</h3>
+          <p>
+            The National Geospatial Policy established a broader framework
+            for developing the geospatial sector and improving access to
+            geospatial data and services.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">03 / The policy gap</div>
+      <h2>Availability is not the same as impact</h2>
+
+      <p class="section-intro">
+        A policy can enable data access without automatically ensuring that
+        institutions can use that data effectively or that citizens experience
+        better public services.
+      </p>
+
+      <div class="argument">
+        <p>
+          The next phase is not just about making data available.
+          It is about making data usable, integrated and relevant
+          to citizen outcomes.
+        </p>
+      </div>
+
+      <div class="three-points">
+        <article class="point">
+          <h3>Usability</h3>
+          <p>
+            Can institutions, researchers and local bodies actually use
+            the available data?
+          </p>
+        </article>
+
+        <article class="point">
+          <h3>Integration</h3>
+          <p>
+            Can geospatial information work across departments, systems
+            and public-service processes?
+          </p>
+        </article>
+
+        <article class="point">
+          <h3>Citizen impact</h3>
+          <p>
+            Does better access translate into more responsive planning
+            and improved public outcomes?
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="section-label">The central question</div>
+      <h2>The data is flowing. The real win is when a citizen feels the difference.</h2>
+      <p>
+        This policy breakdown was developed as part of the CSE PlanB
+        Public Policy Fellowship, using a Policy Anatomy framework.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <span>Harini V S · Programme Management · Data-Driven Governance · Public Policy</span>
+      <a class="back" href="../../">Back to all work ↗</a>
+    </footer>
+
+  </main>
+</body>
+</html>
+
