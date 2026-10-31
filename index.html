@@ -738,65 +738,6 @@
       gap: 15px;
     }
 
-    /* Modal */
-
-    .modal-backdrop {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 200;
-      background: rgba(12, 27, 34, .72);
-      padding: 24px;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .modal-backdrop.open { display: flex; }
-
-    .modal {
-      width: min(650px, 100%);
-      max-height: 85vh;
-      overflow-y: auto;
-      background: var(--paper);
-      padding: clamp(25px, 5vw, 45px);
-      position: relative;
-    }
-
-    .modal-close {
-      position: absolute;
-      right: 18px;
-      top: 13px;
-      border: 0;
-      background: transparent;
-      font-size: 27px;
-      cursor: pointer;
-      color: var(--ink);
-    }
-
-    .modal h2 {
-      font-size: 34px;
-      padding-right: 25px;
-    }
-
-    .modal p { color: var(--ink-soft); }
-
-    .modal-label {
-      color: var(--teal-dark);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-    }
-
-    .modal-action {
-      display: inline-block;
-      margin-top: 12px;
-      color: var(--teal-dark);
-      border-bottom: 1px solid var(--teal);
-      font-size: 12px;
-      font-weight: 700;
-    }
-
     /* Accessibility and responsive */
 
     a:focus-visible,
@@ -1051,7 +992,7 @@
             <a class="project-link" href="works/ai-crossing-the-line/">View project ↗</a>
           </article>
 
-          <!-- 02 SOUTHERN DEMOGRAPHIC RESILIENCE PILOT -->
+          <!-- 02 -->
 
           <article class="project" data-category="development governance research">
             <div class="project-number">02</div>
@@ -1093,7 +1034,7 @@
                 Includes the Employment-Oriented Transit Development (E-TOD) framework
               </div>
             </div>
-            <a class="project-link" href="works/from-transit-to-opportunity/""_blank" rel="noopener noreferrer">View project ↗</a>
+            <a class="project-link" href="works/from-transit-to-opportunity/">View project ↗</a>
           </article>
 
           <!-- 04 -->
@@ -1158,7 +1099,7 @@
                 incentives and participation.
               </p>
             </div>
-            <a class="project-link" href="https://lnkd.in/p/gQ5fGQc6" target="_blank" rel="noopener noreferrer">View project ↗</a>
+            <a class="project-link" href="works/tamil-nadu-circular-economy/">View project ↗</a>
           </article>
 
           <!-- 08 -->
@@ -1191,7 +1132,7 @@
                 into public value.
               </p>
             </div>
-            <a class="project-link" href="works/national-geospatial-policy/"" target="_blank" rel="noopener noreferrer">View project ↗</a>
+            <a class="project-link" href="works/national-geospatial-policy/">View project ↗</a>
           </article>
 
           <!-- 10 -->
@@ -1206,7 +1147,7 @@
                 and public-system decision-making.
               </p>
             </div>
-            <a class="project-link" href="works/project-drishti/" target="_blank" rel="noopener noreferrer">View project ↗</a>
+            <a class="project-link" href="works/project-drishti/">View project ↗</a>
           </article>
 
           <!-- 11 -->
@@ -1476,18 +1417,6 @@
     </div>
   </footer>
 
-  <!-- PROJECT DETAIL MODAL -->
-
-  <div class="modal-backdrop" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal">
-      <button class="modal-close" id="modalClose" aria-label="Close project details">×</button>
-      <div class="modal-label" id="modalCategory">Selected work</div>
-      <h2 id="modalTitle">Project title</h2>
-      <p id="modalDescription"></p>
-      <a class="modal-action" id="modalLink" href="#" target="_blank" rel="noopener noreferrer">Explore project ↗</a>
-    </div>
-  </div>
-
   <script>
     // Mobile navigation
     const menuToggle = document.getElementById("menuToggle");
@@ -1531,29 +1460,6 @@
           project.hidden = !visible;
         });
       });
-    });
-
-    // Project detail modal
-    const modal = document.getElementById("projectModal");
-    const modalClose = document.getElementById("modalClose");
-    const modalTitle = document.getElementById("modalTitle");
-    const modalCategory = document.getElementById("modalCategory");
-    const modalDescription = document.getElementById("modalDescription");
-    const modalLink = document.getElementById("modalLink");
-
-    function closeModal() {
-      modal.classList.remove("open");
-      document.body.style.overflow = "";
-    }
-
-    modalClose.addEventListener("click", closeModal);
-
-    modal.addEventListener("click", event => {
-      if (event.target === modal) closeModal();
-    });
-
-    document.addEventListener("keydown", event => {
-      if (event.key === "Escape") closeModal();
     });
 
     // Footer year
