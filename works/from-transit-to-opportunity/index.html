@@ -1,1 +1,867 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f2eb">
+
+  <title>From Transit to Opportunity | Harini V S</title>
+
+  <meta name="description" content="From Transit to Opportunity: an Employment-Oriented Transit Development policy proposal and implementation framework focused on connecting workers to jobs.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --paper: #f5f2eb;
+      --white: #fffefa;
+      --ink: #202d36;
+      --muted: #69747a;
+      --teal: #527b76;
+      --teal-dark: #315d59;
+      --coral: #bd775e;
+      --line: #dedbd2;
+      --soft: #eae8df;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 0;
+      border-bottom: 1px solid var(--line);
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .back-link {
+      font-size: 12px;
+      text-decoration: none;
+      color: var(--muted);
+      transition: color .2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--teal-dark);
+    }
+
+    .hero {
+      padding: 100px 0 85px;
+      max-width: 900px;
+    }
+
+    .eyebrow {
+      color: var(--teal-dark);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--serif);
+      font-weight: 600;
+      line-height: 1.18;
+    }
+
+    h1 {
+      font-size: clamp(46px, 7vw, 82px);
+      letter-spacing: -2px;
+      max-width: 850px;
+    }
+
+    .hero-subtitle {
+      color: var(--teal-dark);
+      font-size: clamp(16px, 2vw, 21px);
+      margin-top: 22px;
+      font-weight: 500;
+    }
+
+    .hero-description {
+      max-width: 690px;
+      color: var(--muted);
+      font-size: 16px;
+      margin-top: 28px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 35px;
+    }
+
+    .tag {
+      border: 1px solid #c9d4ce;
+      color: var(--teal-dark);
+      padding: 7px 12px;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .hero-rule {
+      width: 70px;
+      height: 3px;
+      background: var(--coral);
+      margin-top: 45px;
+    }
+
+    section {
+      padding: 75px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-label {
+      color: var(--coral);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 17px;
+    }
+
+    h2 {
+      font-size: clamp(32px, 4.5vw, 48px);
+      max-width: 760px;
+      margin-bottom: 24px;
+    }
+
+    h3 {
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .intro {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 55px;
+      margin-top: 45px;
+      align-items: start;
+    }
+
+    .problem-copy p {
+      margin-bottom: 18px;
+      color: var(--muted);
+    }
+
+    .insight {
+      background: var(--ink);
+      color: var(--white);
+      padding: 35px;
+    }
+
+    .insight .big-number {
+      font-family: var(--serif);
+      font-size: 54px;
+      color: #d8a18b;
+      line-height: 1.1;
+    }
+
+    .insight p {
+      color: #e0e2df;
+      font-size: 14px;
+      margin-top: 12px;
+    }
+
+    .insight-note {
+      border-top: 1px solid #53616a;
+      margin-top: 25px;
+      padding-top: 18px;
+      color: #c3ceca;
+      font-size: 12px;
+    }
+
+    .shift {
+      background: #e9eee8;
+      padding: 40px;
+      margin-top: 45px;
+    }
+
+    .shift-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal-dark);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .shift p {
+      font-family: var(--serif);
+      font-size: clamp(23px, 3vw, 34px);
+      line-height: 1.4;
+      max-width: 800px;
+    }
+
+    .challenge {
+      display: grid;
+      grid-template-columns: 75px 1fr;
+      gap: 25px;
+      margin-top: 45px;
+      padding-bottom: 45px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .challenge-number {
+      font-family: var(--serif);
+      color: var(--coral);
+      font-size: 38px;
+    }
+
+    .challenge-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal-dark);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .challenge-content p {
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .policy-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 35px;
+      margin-top: 30px;
+    }
+
+    .policy-item {
+      padding: 21px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .policy-item strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 7px;
+    }
+
+    .policy-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .framework-callout {
+      margin-top: 35px;
+      padding: 28px 30px;
+      border-left: 3px solid var(--teal);
+      background: #eaece5;
+    }
+
+    .framework-callout p {
+      color: var(--ink);
+      font-size: 15px;
+    }
+
+    .target-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 35px;
+    }
+
+    .target {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 28px;
+    }
+
+    .target-number {
+      font-family: var(--serif);
+      color: var(--teal-dark);
+      font-size: 42px;
+      line-height: 1.2;
+    }
+
+    .target p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .embed-frame {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: var(--white);
+      border-radius: 3px;
+      display: block;
+    }
+
+    .website-frame {
+      height: 850px;
+      margin-top: 35px;
+    }
+
+    .pdf-frame {
+      height: 760px;
+      margin-top: 35px;
+    }
+
+    .embed-caption {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 13px;
+    }
+
+    .website-fallback {
+      margin-top: 18px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .website-fallback a {
+      color: var(--teal-dark);
+      font-weight: 700;
+    }
+
+    .quote-section {
+      background: var(--ink);
+      color: var(--white);
+      padding: 65px;
+      margin: 75px 0;
+    }
+
+    .quote-mark {
+      font-family: var(--serif);
+      color: #d8a18b;
+      font-size: 55px;
+      line-height: 1;
+    }
+
+    blockquote {
+      font-family: var(--serif);
+      font-size: clamp(25px, 3.5vw, 39px);
+      line-height: 1.4;
+      max-width: 800px;
+      margin-top: 15px;
+    }
+
+    .quote-caption {
+      color: #c3ceca;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-top: 25px;
+    }
+
+    .closing {
+      padding: 60px 0 90px;
+    }
+
+    .closing p {
+      color: var(--muted);
+      max-width: 680px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 25px 0 35px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    footer a {
+      text-decoration: none;
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        padding: 70px 0 60px;
+      }
+
+      .problem-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .policy-list,
+      .target-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .challenge {
+        grid-template-columns: 48px 1fr;
+        gap: 15px;
+      }
+
+      .shift {
+        padding: 28px;
+      }
+
+      .quote-section {
+        padding: 35px 25px;
+        margin: 50px 0;
+      }
+
+      .website-frame {
+        height: 680px;
+      }
+
+      .pdf-frame {
+        height: 600px;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <header class="topbar">
+      <div class="brand">Policy · Governance · Mobility</div>
+      <a class="back-link" href="../../">← Back to portfolio</a>
+    </header>
+
+    <main>
+
+      <!-- HERO -->
+
+      <div class="hero">
+        <div class="eyebrow">Policy Design · Urban Mobility · Employment Access</div>
+
+        <h1>From Transit to Opportunity</h1>
+
+        <div class="hero-subtitle">
+          Employment-Oriented Transit Development (E-TOD)
+        </div>
+
+        <p class="hero-description">
+          A policy proposal that reframes public transport around a more
+          fundamental question: not how much infrastructure a city builds,
+          but how effectively that infrastructure connects people to work.
+        </p>
+
+        <div class="hero-meta">
+          <span class="tag">Policy Impact Challenge Series</span>
+          <span class="tag">Challenge 6 + 7</span>
+          <span class="tag">Policy Design & Evaluation</span>
+        </div>
+
+        <div class="hero-rule"></div>
+      </div>
+
+
+      <!-- THE PROBLEM -->
+
+      <section>
+        <div class="section-label">01 / The policy problem</div>
+
+        <h2>A city can build more transit and still leave workers disconnected.</h2>
+
+        <p class="intro">
+          India's expanding urban transport networks do not always keep pace
+          with the geography of employment. Industrial clusters and job centres
+          can lie beyond convenient metro and bus connections, leaving workers
+          dependent on multiple transfers and costly last-mile journeys.
+        </p>
+
+        <div class="problem-grid">
+
+          <div class="problem-copy">
+            <p>
+              The challenge is not simply a shortage of transport infrastructure.
+              It is a mismatch between where transport networks are developed,
+              where employment opportunities are located, and where workers live.
+            </p>
+
+            <p>
+              When public transport does not connect residential areas with
+              employment centres, workers may face longer journeys, higher
+              commuting costs and reduced access to livelihood opportunities.
+            </p>
+
+            <p>
+              Poorly connected journeys can also increase dependence on private
+              vehicles, adding to congestion and urban air pollution.
+            </p>
+          </div>
+
+          <div class="insight">
+            <div class="big-number">41%</div>
+            <p>
+              Share of commute time attributed to first- and last-mile travel
+              in the Delhi figures cited in the policy brief.
+            </p>
+
+            <div class="insight-note">
+              The brief also cites a 47% share of commute cost for first- and
+              last-mile travel. These are figures presented in the project
+              material, not independently updated estimates.
+            </div>
+          </div>
+
+        </div>
+
+        <div class="shift">
+          <div class="shift-label">The proposed policy shift</div>
+          <p>
+            Measure transport success by the jobs people can reach,
+            not merely by the kilometres of track cities build.
+          </p>
+        </div>
+      </section>
+
+
+      <!-- CHALLENGE 6 -->
+
+      <section>
+        <div class="section-label">02 / Challenge 6 · Policy design</div>
+
+        <h2>From Development-Oriented Transit to Employment-Oriented Transit.</h2>
+
+        <p class="intro">
+          The policy brief proposes Employment-Oriented Transit Development
+          (E-TOD): a framework that places employment access, affordability
+          and universal mobility at the centre of urban transport planning.
+        </p>
+
+        <div class="challenge">
+
+          <div class="challenge-number">06</div>
+
+          <div class="challenge-content">
+            <div class="challenge-label">Policy brief</div>
+
+            <h3>From infrastructure expansion to job accessibility</h3>
+
+            <p>
+              The proposal argues that transit investment should be assessed
+              by whether it improves workers' access to employment, particularly
+              in industrial clusters, peripheral job centres and growing urban
+              corridors.
+            </p>
+
+            <p>
+              It brings transport planning, land use, housing, affordability
+              and employment geography into one policy framework.
+            </p>
+          </div>
+
+        </div>
+
+        <h3>What the policy proposes</h3>
+
+        <div class="policy-list">
+
+          <div class="policy-item">
+            <strong>01 · Public Jobs Access Score</strong>
+            <span>
+              A city-level measure of how effectively residents can reach
+              employment opportunities through public transport.
+            </span>
+          </div>
+
+          <div class="policy-item">
+            <strong>02 · Worker Transit Pass</strong>
+            <span>
+              A proposed shared expenditure model involving employers,
+              workers and government.
+            </span>
+          </div>
+
+          <div class="policy-item">
+            <strong>03 · Affordable housing near stations</strong>
+            <span>
+              Mandatory affordable housing provisions around transit stations
+              to support access and reduce spatial exclusion.
+            </span>
+          </div>
+
+          <div class="policy-item">
+            <strong>04 · Employment-oriented land use</strong>
+            <span>
+              Encourage office clusters and employment-generating activities
+              near transit, alongside housing and retail.
+            </span>
+          </div>
+
+          <div class="policy-item">
+            <strong>05 · Blended funding mechanisms</strong>
+            <span>
+              Explore viability gap funding, value capture finance and
+              co-funding arrangements.
+            </span>
+          </div>
+
+          <div class="policy-item">
+            <strong>06 · Mode neutrality</strong>
+            <span>
+              Support buses, feeder services, e-autos and metro as parts
+              of an integrated mobility system.
+            </span>
+          </div>
+
+          <div class="policy-item">
+            <strong>07 · Context-specific planning</strong>
+            <span>
+              Differentiate strategies for established job centres,
+              emerging corridors and smaller cities.
+            </span>
+          </div>
+
+          <div class="policy-item">
+            <strong>08 · Universal accessibility</strong>
+            <span>
+              Incorporate accessibility needs across the complete
+              public transport journey.
+            </span>
+          </div>
+
+        </div>
+
+        <div class="framework-callout">
+          <p>
+            <strong>Core principle:</strong> Transit planning should be
+            employment-sensitive, affordable, inclusive and responsive
+            to the actual geography of work.
+          </p>
+        </div>
+
+      </section>
+
+
+      <!-- TARGETS -->
+
+      <section>
+        <div class="section-label">03 / Intended policy outcomes</div>
+
+        <h2>What should a successful commute look like?</h2>
+
+        <p class="intro">
+          The policy brief articulates measurable aspirations for travel
+          time and affordability. These are proposed targets, not claims
+          of achieved outcomes.
+        </p>
+
+        <div class="target-grid">
+
+          <div class="target">
+            <div class="target-number">45 min</div>
+            <p>
+              Proposed target: help workers reach employment opportunities
+              within 45 minutes.
+            </p>
+          </div>
+
+          <div class="target">
+            <div class="target-number">10%</div>
+            <p>
+              Proposed ceiling: keep daily commuting expenditure at or below
+              10% of a worker's daily wage.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- CHALLENGE 7 -->
+
+      <section>
+        <div class="section-label">04 / Challenge 7 · Implementation & impact</div>
+
+        <h2>Turning the policy vision into measurable delivery.</h2>
+
+        <p class="intro">
+          A policy proposal becomes meaningful when its implementation
+          pathway, institutional responsibilities and intended outcomes
+          can be clearly defined and monitored.
+        </p>
+
+        <div class="challenge">
+
+          <div class="challenge-number">07</div>
+
+          <div class="challenge-content">
+            <div class="challenge-label">Implementation framework</div>
+
+            <h3>Theory of Change, Logframe and Monitoring & Evaluation</h3>
+
+            <p>
+              Building on the E-TOD policy proposal, this stage translates
+              the policy vision into an implementation and impact framework.
+            </p>
+
+            <p>
+              The accompanying framework document sets out the intervention
+              logic, expected results and monitoring structure for assessing
+              whether improved transit planning translates into better
+              employment accessibility.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="framework-callout">
+          <p>
+            <strong>Evaluation question:</strong> Does employment-oriented
+            transit planning improve the accessibility, affordability
+            and inclusiveness of journeys to work?
+          </p>
+        </div>
+
+        <h3 style="margin-top:45px;">Implementation framework document</h3>
+
+        <p class="intro">
+          Explore the Theory of Change, Logframe and Monitoring & Evaluation
+          framework below.
+        </p>
+
+        <iframe
+          class="embed-frame pdf-frame"
+          src="etod-implementation-framework.pdf"
+          title="E-TOD Theory of Change, Logframe and Monitoring and Evaluation Framework"
+          loading="lazy">
+        </iframe>
+
+        <p class="embed-caption">
+          E-TOD Implementation Framework · PDF
+        </p>
+
+      </section>
+
+
+      <!-- PROJECT WEBSITE -->
+
+      <section>
+        <div class="section-label">05 / Full project presentation</div>
+
+        <h2>Explore the E-TOD policy project.</h2>
+
+        <p class="intro">
+          The complete policy presentation is integrated below, bringing
+          together the proposal and its supporting material in one place.
+        </p>
+
+        <iframe
+          class="embed-frame website-frame"
+          src="https://e-tod.netlify.app/"
+          title="From Transit to Opportunity — Employment-Oriented Transit Development"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+
+        <p class="embed-caption">
+          Full project website · Employment-Oriented Transit Development
+        </p>
+
+        <p class="website-fallback">
+          If the embedded presentation does not load, the website may restrict
+          display inside another page. In that case, it can be opened directly:
+          <a href="https://e-tod.netlify.app/" target="_blank" rel="noopener noreferrer">
+            View the E-TOD project
+          </a>.
+        </p>
+
+      </section>
+
+
+      <!-- CLOSING -->
+
+      <div class="quote-section">
+        <div class="quote-mark">“</div>
+
+        <blockquote>
+          Where you live should never determine how far you can go
+          in pursuit of work.
+        </blockquote>
+
+        <div class="quote-caption">
+          From Transit to Opportunity · E-TOD
+        </div>
+      </div>
+
+      <section class="closing">
+        <div class="section-label">The larger policy question</div>
+
+        <h2>Can we make mobility a pathway to opportunity?</h2>
+
+        <p>
+          From Transit to Opportunity brings together policy design and
+          implementation planning to examine how public transport can
+          serve as an instrument of employment access, economic inclusion
+          and more connected urban development.
+        </p>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>Harini V S · Programme Management · Data-Driven Governance · Public Policy</div>
+      <a href="../../">Return to portfolio ↑</a>
+    </footer>
+
+  </div>
+
+</body>
+</html>
+
