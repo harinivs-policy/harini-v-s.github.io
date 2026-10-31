@@ -4,10 +4,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Project DRISHTI | Harini V S</title>
-<meta name="description" content="A policy debate on AI-assisted freight wagon inspection, human oversight and accountability in Indian Railways.">
+
+<meta name="description" content="Project DRISHTI: A policy debate on AI-assisted freight wagon inspection, human oversight and accountability in Indian Railways.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -21,22 +25,31 @@
   --white: #fffefa;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  margin: 0;
   background: var(--paper);
   color: var(--ink);
   font-family: 'DM Sans', sans-serif;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
-a { color: inherit; }
+a {
+  color: inherit;
+}
 
 nav {
   max-width: 1120px;
   margin: auto;
-  padding: 25px 6%;
+  padding: 24px 6%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,26 +57,32 @@ nav {
 }
 
 .brand {
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: .04em;
+  letter-spacing: .08em;
 }
 
 .nav-link {
   color: var(--teal);
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: var(--coral);
 }
 
 main {
-  max-width: 1000px;
+  max-width: 1050px;
   margin: auto;
-  padding: 75px 6% 90px;
+  padding: 80px 6% 100px;
 }
 
 .eyebrow {
   color: var(--coral);
   text-transform: uppercase;
-  letter-spacing: .16em;
+  letter-spacing: .17em;
   font-size: 11px;
   font-weight: 700;
 }
@@ -71,102 +90,145 @@ main {
 h1, h2 {
   font-family: 'Playfair Display', serif;
   font-weight: 500;
-  line-height: 1.15;
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: clamp(42px, 7vw, 76px);
+  font-size: clamp(46px, 7vw, 82px);
   max-width: 850px;
   margin: 20px 0;
+  letter-spacing: -.035em;
 }
 
 .subtitle {
   color: var(--muted);
-  font-size: 19px;
-  max-width: 700px;
+  font-size: 18px;
+  max-width: 740px;
+  line-height: 1.8;
+}
+
+.hero-meta {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.meta-tag {
+  border: 1px solid var(--line);
+  padding: 7px 13px;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: .04em;
 }
 
 .question {
-  margin: 55px 0;
-  padding: 35px;
+  margin: 65px 0;
+  padding: 42px;
   background: var(--ink);
   color: var(--white);
   border-left: 5px solid var(--coral);
 }
 
 .question small {
-  color: #c6d5cf;
+  color: #b8cec5;
   text-transform: uppercase;
-  letter-spacing: .12em;
+  letter-spacing: .15em;
+  font-size: 10px;
+  font-weight: 700;
 }
 
 .question h2 {
-  font-size: clamp(28px, 4vw, 43px);
-  margin: 12px 0 0;
+  font-size: clamp(30px, 5vw, 48px);
+  margin-top: 15px;
 }
 
-section { margin-top: 65px; }
+section {
+  margin-top: 80px;
+}
 
-h2.section-title {
-  font-size: 34px;
-  margin-bottom: 18px;
+.section-title {
+  font-size: clamp(30px, 4vw, 42px);
+  margin: 13px 0 20px;
 }
 
 .intro {
   color: var(--muted);
-  max-width: 760px;
+  max-width: 790px;
+  font-size: 15px;
+  margin-top: 13px;
 }
 
 .debate-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  margin-top: 28px;
+  margin-top: 32px;
 }
 
 .debate-card {
   background: var(--white);
   border: 1px solid var(--line);
-  padding: 25px;
+  padding: 27px 24px;
+  transition: transform .25s ease, border-color .25s ease;
+}
+
+.debate-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--teal);
 }
 
 .number {
   color: var(--coral);
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 700;
+  letter-spacing: .12em;
 }
 
 .debate-card h3 {
   font-size: 17px;
-  line-height: 1.45;
-  margin: 12px 0;
+  line-height: 1.5;
+  margin: 16px 0 12px;
 }
 
 .debate-card p {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 1.8;
 }
 
 .note {
   background: #e9eee8;
-  padding: 25px 28px;
+  padding: 26px 30px;
   border-left: 3px solid var(--teal);
-  margin-top: 25px;
-  font-size: 14px;
+  margin-top: 30px;
+  font-size: 13px;
+  color: var(--ink);
 }
 
 .pdf-section {
   background: var(--white);
   border: 1px solid var(--line);
-  padding: 28px;
-  margin-top: 25px;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.pdf-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.pdf-description {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 7px;
 }
 
 .pdf-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin: 18px 0 25px;
+  margin: 22px 0 28px;
 }
 
 .btn {
@@ -175,8 +237,14 @@ h2.section-title {
   background: var(--ink);
   color: white;
   text-decoration: none;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .03em;
+  transition: background .2s ease;
+}
+
+.btn:hover {
+  background: var(--teal);
 }
 
 .btn.secondary {
@@ -185,27 +253,109 @@ h2.section-title {
   color: var(--teal);
 }
 
+.btn.secondary:hover {
+  background: var(--teal);
+  color: white;
+}
+
 iframe {
   display: block;
   width: 100%;
-  height: 700px;
+  height: 720px;
   border: 1px solid var(--line);
   background: white;
 }
 
-footer {
-  border-top: 1px solid var(--line);
-  padding: 25px 6%;
-  text-align: center;
-  color: var(--muted);
-  font-size: 12px;
+.discussion {
+  margin-top: 35px;
+  padding: 38px;
+  background: var(--ink);
+  color: var(--white);
 }
 
-@media (max-width: 700px) {
-  main { padding-top: 48px; }
-  .debate-grid { grid-template-columns: 1fr; }
-  .question { padding: 25px; }
-  iframe { height: 500px; }
+.discussion .eyebrow {
+  color: #d6a18a;
+}
+
+.discussion h2 {
+  font-size: clamp(29px, 4vw, 43px);
+  margin: 15px 0;
+}
+
+.discussion p {
+  color: #d1d9d5;
+  font-size: 14px;
+  max-width: 700px;
+}
+
+.discussion .btn {
+  margin-top: 24px;
+  background: var(--coral);
+  color: white;
+}
+
+.discussion .btn:hover {
+  background: #a65f48;
+}
+
+.disclaimer {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 22px;
+  font-style: italic;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 55px;
+  color: var(--teal);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--coral);
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 6%;
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: .06em;
+}
+
+@media (max-width: 760px) {
+  main {
+    padding: 55px 6% 75px;
+  }
+
+  .debate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .question {
+    padding: 28px;
+    margin: 45px 0;
+  }
+
+  .pdf-section {
+    padding: 18px;
+  }
+
+  iframe {
+    height: 520px;
+  }
+
+  .discussion {
+    padding: 27px;
+  }
+
+  nav {
+    padding: 20px 6%;
+  }
 }
 </style>
 </head>
@@ -219,7 +369,9 @@ footer {
 
 <main>
 
-  <div class="eyebrow">The Policy Debate · AI & Governance</div>
+  <!-- HERO -->
+
+  <div class="eyebrow">The Policy Debate / AI & Governance</div>
 
   <h1>Project DRISHTI</h1>
 
@@ -228,109 +380,176 @@ footer {
     freight wagon inspection across Indian Railways.
   </p>
 
+  <div class="hero-meta">
+    <span class="meta-tag">ARTIFICIAL INTELLIGENCE</span>
+    <span class="meta-tag">RAILWAY GOVERNANCE</span>
+    <span class="meta-tag">HUMAN OVERSIGHT</span>
+  </div>
+
+  <!-- CENTRAL QUESTION -->
+
   <div class="question">
     <small>The central question</small>
     <h2>Should AI decide, or only alert?</h2>
   </div>
 
+  <!-- CONTEXT -->
+
   <section>
-    <div class="eyebrow">01 / The context</div>
-    <h2 class="section-title">When inspection becomes automated</h2>
+    <div class="eyebrow">01 / The Context</div>
+
+    <h2 class="section-title">
+      When inspection becomes automated
+    </h2>
 
     <p class="intro">
       Indian Railways' Project DRISHTI uses AI-enabled cameras to
       inspect moving freight wagons for issues such as open doors,
-      broken locks and tampered seals. The technology offers the
-      possibility of faster and wider inspection coverage.
+      broken locks and tampered seals.
     </p>
 
     <p class="intro">
-      But expanding automated screening raises a governance question:
-      when AI screens every wagon, what should remain the responsibility
-      of human inspectors?
+      The technology offers the possibility of faster and wider
+      inspection coverage. AI can screen wagons as trains pass,
+      potentially changing the scale and speed of freight inspection.
+    </p>
+
+    <p class="intro">
+      But expanding automated screening raises a larger governance
+      question: when AI screens every wagon, what should remain
+      the responsibility of human inspectors?
     </p>
   </section>
 
+  <!-- DEBATE -->
+
   <section>
-    <div class="eyebrow">02 / The debate</div>
-    <h2 class="section-title">Three questions worth examining</h2>
+    <div class="eyebrow">02 / The Debate</div>
+
+    <h2 class="section-title">
+      Three questions worth examining
+    </h2>
+
+    <p class="intro">
+      The introduction of AI into safety-sensitive public systems
+      is not merely a question of technological capability.
+      It is also a question of authority, accountability and trust.
+    </p>
 
     <div class="debate-grid">
 
       <article class="debate-card">
         <div class="number">QUESTION 01</div>
+
         <h3>AI coverage versus human sampling</h3>
+
         <p>
-          Is AI screening with human spot-checks preferable to
-          human inspection of a smaller sample?
+          Is 100% AI screening with human spot-checks a more
+          effective approach than 100% human screening of
+          a smaller sample?
         </p>
       </article>
 
       <article class="debate-card">
         <div class="number">QUESTION 02</div>
+
         <h3>Can humans challenge an AI flag?</h3>
+
         <p>
           Can a junior inspector override an AI-generated alert?
-          Who is accountable when an override leads to a wrong decision?
+          Who is accountable if the overridden decision
+          subsequently proves incorrect?
         </p>
       </article>
 
       <article class="debate-card">
         <div class="number">QUESTION 03</div>
+
         <h3>What should people be trained for?</h3>
+
         <p>
           As AI enters railways, roads and courts, how should
-          professional training evolve?
+          professional training evolve to prepare people
+          for increasingly automated systems?
         </p>
       </article>
 
     </div>
   </section>
 
+  <!-- GOVERNANCE -->
+
   <section>
-    <div class="eyebrow">03 / Governance perspective</div>
-    <h2 class="section-title">Technology needs accountability</h2>
+    <div class="eyebrow">03 / Governance Perspective</div>
+
+    <h2 class="section-title">
+      Technology needs accountability
+    </h2>
 
     <p class="intro">
       The debate is not simply about whether AI can detect an anomaly.
-      It is about how automated alerts, human judgement and institutional
-      responsibility should work together in safety-sensitive systems.
+      It is about how automated alerts, human judgement and
+      institutional responsibility should work together in
+      safety-sensitive systems.
+    </p>
+
+    <p class="intro">
+      The central challenge is to establish a relationship between
+      technological efficiency and meaningful human oversight.
+      An automated system can identify a potential problem, but
+      institutions must still define how alerts are reviewed,
+      challenged, escalated and documented.
     </p>
 
     <div class="note">
       <strong>Important distinction:</strong>
       The governance approach explored in this project is a proposed
-      analytical perspective for discussion. It should not be interpreted
-      as an official policy or operating procedure of Indian Railways
-      or Project DRISHTI.
+      analytical perspective for discussion. It should not be
+      interpreted as an official policy, operating procedure or
+      approved framework of Indian Railways or Project DRISHTI.
     </div>
   </section>
 
+  <!-- CAROUSEL -->
+
   <section>
-    <div class="eyebrow">04 / Project document</div>
-    <h2 class="section-title">Explore the policy debate</h2>
+    <div class="eyebrow">04 / Project Document</div>
+
+    <h2 class="section-title">
+      Explore the policy debate
+    </h2>
 
     <p class="intro">
-      Read the accompanying carousel for the proposed approach,
-      governance considerations and questions for discussion.
+      The accompanying carousel presents the debate, its governance
+      implications and a possible approach to human oversight.
     </p>
 
     <div class="pdf-section">
 
-      <strong>Project DRISHTI — Policy Debate Carousel</strong>
+      <div class="pdf-title">
+        Project DRISHTI — Policy Debate Carousel
+      </div>
+
+      <p class="pdf-description">
+        View the complete project document below or open it
+        separately for a larger reading experience.
+      </p>
 
       <div class="pdf-actions">
+
         <a class="btn"
            href="project-drishti-carousel.pdf"
-           target="_blank">
+           target="_blank"
+           rel="noopener">
           Open PDF ↗
         </a>
 
         <a class="btn secondary"
            href="project-drishti-carousel.pdf"
-           download>
+           download="project-drishti-carousel.pdf">
           Download PDF ↓
         </a>
+
       </div>
 
       <iframe
@@ -341,22 +560,104 @@ footer {
     </div>
   </section>
 
+  <!-- DISCUSSION -->
+
   <section>
-    <div class="eyebrow">05 / Join the conversation</div>
-    <h2 class="section-title">Where should human judgement remain?</h2>
+    <div class="eyebrow">05 / Join the Conversation</div>
+
+    <h2 class="section-title">
+      Where should human judgement remain?
+    </h2>
 
     <p class="intro">
-      A discussion for professionals working across railway operations,
-      artificial intelligence, public policy and safety governance.
+      Project DRISHTI raises questions that extend beyond railway
+      inspection. The balance between automation, human judgement
+      and institutional accountability will matter wherever AI
+      enters public decision-making.
     </p>
+
+    <div class="debate-grid">
+
+      <article class="debate-card">
+        <div class="number">01 / AUTOMATION</div>
+
+        <h3>Should AI screen every wagon?</h3>
+
+        <p>
+          Can comprehensive AI screening with human spot-checks
+          offer a more effective inspection model?
+        </p>
+      </article>
+
+      <article class="debate-card">
+        <div class="number">02 / OVERSIGHT</div>
+
+        <h3>Who gets the final say?</h3>
+
+        <p>
+          Should human inspectors retain the authority to
+          challenge or override an AI-generated alert?
+        </p>
+      </article>
+
+      <article class="debate-card">
+        <div class="number">03 / ACCOUNTABILITY</div>
+
+        <h3>Who takes responsibility?</h3>
+
+        <p>
+          How should responsibility be distributed between
+          technology providers, operators and inspecting officials?
+        </p>
+      </article>
+
+    </div>
+
+    <div class="discussion">
+
+      <div class="eyebrow">Continue the discussion</div>
+
+      <h2>What is your perspective?</h2>
+
+      <p>
+        This project is an invitation to examine how AI should
+        function within public institutions. If you work in railway
+        operations, AI policy, technology or safety governance,
+        share your perspective on the original discussion.
+      </p>
+
+      <a class="btn"
+         href="https://lnkd.in/p/gDJRut5k"
+         target="_blank"
+         rel="noopener">
+        Discuss on LinkedIn ↗
+      </a>
+
+    </div>
+
+    <p class="disclaimer">
+      This is an independent policy debate and analytical exercise.
+      The proposed governance perspective is not an official
+      Indian Railways position.
+    </p>
+
   </section>
+
+  <a class="back-link" href="../../">
+    ← Return to All Work
+  </a>
 
 </main>
 
 <footer>
-  HARINI V S · PROGRAMME MANAGEMENT · DATA-DRIVEN GOVERNANCE · PUBLIC POLICY
+  HARINI V S
+  &nbsp;·&nbsp;
+  PROGRAMME MANAGEMENT
+  &nbsp;·&nbsp;
+  DATA-DRIVEN GOVERNANCE
+  &nbsp;·&nbsp;
+  PUBLIC POLICY
 </footer>
 
 </body>
 </html>
-
