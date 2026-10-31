@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Campus That Could Not Agree — an interactive exploration of stakeholder perspectives and institutional decision-making.">
+
+  <meta name="description" content="The Campus That Could Not Agree — an interactive exploration of stakeholder perspectives, institutional disagreement and collective decision-making.">
+
   <title>The Campus That Could Not Agree | Harini V S</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +24,13 @@
       --white: #fffefa;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -32,12 +40,16 @@
       line-height: 1.7;
     }
 
-    a { color: inherit; }
+    a {
+      color: inherit;
+    }
 
     .page {
       width: min(1080px, calc(100% - 48px));
       margin: auto;
     }
+
+    /* HEADER */
 
     header {
       padding: 25px 0;
@@ -55,17 +67,29 @@
       text-transform: uppercase;
     }
 
+    .brand span {
+      color: var(--coral);
+    }
+
     .back {
       color: var(--muted);
       text-decoration: none;
       font-size: 13px;
+      transition: color .2s ease;
     }
 
-    .back:hover { color: var(--teal); }
+    .back:hover {
+      color: var(--teal);
+    }
 
-    main { padding: 76px 0 90px; }
+    /* HERO */
 
-    .eyebrow {
+    main {
+      padding: 76px 0 90px;
+    }
+
+    .eyebrow,
+    .section-label {
       color: var(--teal);
       font-size: 11px;
       font-weight: 700;
@@ -74,7 +98,7 @@
     }
 
     h1 {
-      max-width: 820px;
+      max-width: 850px;
       margin: 18px 0 20px;
       font-family: 'Playfair Display', serif;
       font-size: clamp(42px, 7vw, 76px);
@@ -91,26 +115,19 @@
     }
 
     .thesis {
-      margin: 46px 0 62px;
+      margin: 46px 0 68px;
       padding: 24px 30px;
       border-left: 3px solid var(--coral);
-      background: rgba(255, 254, 250, .7);
+      background: rgba(255, 254, 250, .75);
       font-family: 'Playfair Display', serif;
       font-size: clamp(21px, 3vw, 29px);
       line-height: 1.45;
     }
 
-    .section-label {
-      margin-bottom: 12px;
-      color: var(--teal);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-    }
+    /* SECTION HEADINGS */
 
     h2 {
-      margin: 0 0 14px;
+      margin: 10px 0 14px;
       font-family: 'Playfair Display', serif;
       font-size: clamp(27px, 4vw, 38px);
       font-weight: 500;
@@ -121,6 +138,38 @@
       max-width: 680px;
       margin: 0 0 28px;
       color: var(--muted);
+    }
+
+    /* VIDEO */
+
+    .video-section {
+      margin-bottom: 76px;
+    }
+
+    .video-frame {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background: #202b35;
+    }
+
+    .video-frame video {
+      display: block;
+      width: 100%;
+      max-height: 620px;
+      background: #202b35;
+    }
+
+    .media-caption {
+      margin: 11px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* INTERACTIVE EXPERIENCE */
+
+    .experience-section {
+      margin-top: 0;
     }
 
     .experience {
@@ -144,6 +193,7 @@
     .experience-top strong {
       color: var(--ink);
       font-weight: 600;
+      letter-spacing: .06em;
     }
 
     .experience iframe {
@@ -158,6 +208,12 @@
       padding: 22px;
       text-align: center;
       border-top: 1px solid var(--line);
+    }
+
+    .fallback p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 13px;
     }
 
     .button {
@@ -178,9 +234,11 @@
       transform: translateY(-2px);
     }
 
+    /* THEMES */
+
     .themes {
-      margin: 68px 0 0;
-      padding: 28px 0;
+      margin: 76px 0 0;
+      padding: 30px 0;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 25px;
@@ -191,7 +249,7 @@
     .theme-number {
       color: var(--coral);
       font-family: 'Playfair Display', serif;
-      font-size: 24px;
+      font-size: 25px;
     }
 
     .theme-title {
@@ -206,9 +264,11 @@
       font-size: 13px;
     }
 
+    /* CLOSING */
+
     .closing {
       max-width: 700px;
-      margin: 65px auto 0;
+      margin: 70px auto 0;
       text-align: center;
     }
 
@@ -216,6 +276,8 @@
       color: var(--muted);
       font-size: 15px;
     }
+
+    /* FOOTER */
 
     footer {
       padding: 22px 0;
@@ -227,28 +289,74 @@
       gap: 16px;
     }
 
+    /* MOBILE */
+
     @media (max-width: 650px) {
-      .page { width: min(100% - 32px, 1080px); }
-      header { align-items: flex-start; }
-      main { padding: 52px 0 65px; }
-      .intro { font-size: 16px; }
-      .thesis { padding: 20px; margin: 36px 0 48px; }
-      .themes { grid-template-columns: 1fr; gap: 22px; }
-      .experience iframe { height: 600px; }
-      footer { flex-direction: column; }
+      .page {
+        width: min(100% - 32px, 1080px);
+      }
+
+      header {
+        align-items: flex-start;
+      }
+
+      main {
+        padding: 52px 0 65px;
+      }
+
+      .intro {
+        font-size: 16px;
+      }
+
+      .thesis {
+        padding: 20px;
+        margin: 36px 0 50px;
+      }
+
+      .video-section {
+        margin-bottom: 58px;
+      }
+
+      .themes {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .experience iframe {
+        height: 600px;
+      }
+
+      footer {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 
 <body>
+
   <div class="page">
+
+    <!-- HEADER -->
+
     <header>
-      <div class="brand">Harini V S <span style="color:#c77b62">/</span> Policy & Governance</div>
-      <a class="back" href="../../index.html">← Back to portfolio</a>
+      <div class="brand">
+        Harini V S <span>/</span> Policy & Governance
+      </div>
+
+      <a class="back" href="../../index.html">
+        ← Back to portfolio
+      </a>
     </header>
 
+
     <main>
-      <div class="eyebrow">Interactive policy simulation · Perspective-taking</div>
+
+      <!-- PROJECT INTRODUCTION -->
+
+      <div class="eyebrow">
+        Interactive policy simulation · Perspective-taking
+      </div>
 
       <h1>The Campus That Could Not Agree</h1>
 
@@ -264,9 +372,56 @@
         the problem through someone else's lens?
       </div>
 
-      <section>
-        <div class="section-label">Explore the experience</div>
+
+      <!-- VIDEO SECTION -->
+
+      <section class="video-section">
+
+        <div class="section-label">
+          Watch the concept
+        </div>
+
+        <h2>Seven perspectives. One situation.</h2>
+
+        <p class="section-copy">
+          A short introduction to the perspective-taking exercise
+          and the questions at the heart of this simulation.
+        </p>
+
+        <div class="video-frame">
+
+          <video
+            controls
+            playsinline
+            preload="metadata">
+
+            <source
+              src="campus-perspective-shift.mp4"
+              type="video/mp4">
+
+            Your browser does not support HTML video.
+
+          </video>
+
+        </div>
+
+        <p class="media-caption">
+          Video introduction · The Campus That Could Not Agree
+        </p>
+
+      </section>
+
+
+      <!-- INTERACTIVE EXPERIENCE -->
+
+      <section class="experience-section">
+
+        <div class="section-label">
+          Explore the experience
+        </div>
+
         <h2>Step inside the campus.</h2>
+
         <p class="section-copy">
           Choose a stakeholder's perspective, examine what they see,
           and consider what may be missing from their understanding.
@@ -274,9 +429,10 @@
         </p>
 
         <div class="experience">
+
           <div class="experience-top">
             <strong>THE INTERACTIVE EXPERIENCE</strong>
-            <span>External project</span>
+            <span>Interactive simulation</span>
           </div>
 
           <iframe
@@ -287,55 +443,111 @@
           </iframe>
 
           <div class="fallback">
-            <p style="margin:0 0 14px;color:#68747b;font-size:13px">
-              If the experience does not load inside this page, open it separately.
+
+            <p>
+              If the experience does not load inside this page,
+              open it separately.
             </p>
-            <a class="button"
-               href="https://thecampusthatcouldnotagree.netlify.app/"
-               target="_blank"
-               rel="noopener noreferrer">
+
+            <a
+              class="button"
+              href="https://thecampusthatcouldnotagree.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer">
               Enter the campus ↗
             </a>
+
           </div>
+
         </div>
+
       </section>
 
+
+      <!-- KEY THEMES -->
+
       <section class="themes">
+
         <div>
           <div class="theme-number">01</div>
-          <div class="theme-title">Stakeholder perspectives</div>
-          <p class="theme-copy">How different actors interpret a shared situation.</p>
+
+          <div class="theme-title">
+            Stakeholder perspectives
+          </div>
+
+          <p class="theme-copy">
+            How different actors interpret a shared situation.
+          </p>
         </div>
+
 
         <div>
           <div class="theme-number">02</div>
-          <div class="theme-title">Competing priorities</div>
-          <p class="theme-copy">Why institutional interests can lead to different conclusions.</p>
+
+          <div class="theme-title">
+            Competing priorities
+          </div>
+
+          <p class="theme-copy">
+            Why institutional interests can lead to different conclusions.
+          </p>
         </div>
+
 
         <div>
           <div class="theme-number">03</div>
-          <div class="theme-title">Collective decision-making</div>
-          <p class="theme-copy">What becomes visible when perspectives are considered together.</p>
+
+          <div class="theme-title">
+            Collective decision-making
+          </div>
+
+          <p class="theme-copy">
+            What becomes visible when perspectives are considered together.
+          </p>
         </div>
+
       </section>
 
+
+      <!-- POLICY TAKEAWAY -->
+
       <div class="closing">
-        <div class="section-label">The policy lens</div>
-        <h2>Understanding a problem is also about understanding who sees it.</h2>
+
+        <div class="section-label">
+          The policy lens
+        </div>
+
+        <h2>
+          Understanding a problem is also about understanding who sees it.
+        </h2>
+
         <p>
-          The exercise highlights a central challenge in public problem-solving:
-          decisions are shaped not only by the facts available, but also by
-          the positions from which those facts are interpreted.
+          The exercise highlights a central challenge in public
+          problem-solving: decisions are shaped not only by the facts
+          available, but also by the positions from which those facts
+          are interpreted.
         </p>
+
       </div>
+
     </main>
 
+
+    <!-- FOOTER -->
+
     <footer>
-      <span>Harini V S · Public Policy & Governance</span>
-      <a class="back" href="../../index.html">Return to portfolio ↑</a>
+
+      <span>
+        Harini V S · Public Policy & Governance
+      </span>
+
+      <a class="back" href="../../index.html">
+        Return to portfolio ↑
+      </a>
+
     </footer>
+
   </div>
+
 </body>
 </html>
-
